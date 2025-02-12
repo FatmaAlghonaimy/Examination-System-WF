@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Presentation\AdminForms\frmAdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\AdminForms\frmAdminManageExams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\AdminForms\frmAdminManageStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\AdminForms\frmAdminProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\AdminForms\frmAdminReport1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\AdminForms\frmAdminReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\AdminForms\frmAdminManageTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\StudentForms\frmStudentCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\StudentForms\frmStudentExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\StudentForms\frmStudentExamsHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\StudentForms\frmStudentProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\frmTeacherDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\frmTeacherManageExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\frmTeacherManageStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\frmTeacherProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\frmTeacherReport1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\frmTeacherReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,659 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\teacherforms\\frmteacherdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\teacherforms\\frmteacherdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\teacherforms\\frmteacherdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\teacherforms\\frmteacherdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\adminforms\\frmadmindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadmindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\adminforms\\frmadmindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadmindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\adminforms\\frmadminprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\adminforms\\frmadminprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\adminforms\\frmadminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\adminforms\\frmadminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\adminforms\\frmadminreport1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminreport1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\adminforms\\frmadminmanageteachers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminmanageteachers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\adminforms\\frmadminmanageteachers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminmanageteachers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\adminforms\\frmadminmanagestudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminmanagestudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\adminforms\\frmadminmanagestudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminmanagestudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\adminforms\\frmadminmanageexams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminmanageexams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\adminforms\\frmadminmanageexams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminmanageexams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\studentforms\\frmstudentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\studentforms\\frmstudentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\studentforms\\frmstudentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\studentforms\\frmstudentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\studentforms\\frmstudentexamshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\studentforms\\frmstudentexamshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\studentforms\\frmstudentexamshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\studentforms\\frmstudentexamshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\studentforms\\frmstudentexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\studentforms\\frmstudentexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\studentforms\\frmstudentexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\studentforms\\frmstudentexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\studentforms\\frmstudentcourses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\studentforms\\frmstudentcourses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\studentforms\\frmstudentcourses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\studentforms\\frmstudentcourses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\teacherforms\\frmteacherreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\teacherforms\\frmteacherreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\teacherforms\\frmteacherreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\teacherforms\\frmteacherreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\teacherforms\\frmteacherreport1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\teacherforms\\frmteacherreport1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\teacherforms\\frmteacherprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\teacherforms\\frmteacherprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\teacherforms\\frmteacherprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\teacherforms\\frmteacherprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\teacherforms\\frmteachermanagestudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\teacherforms\\frmteachermanagestudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\teacherforms\\frmteachermanagestudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\teacherforms\\frmteachermanagestudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\teacherforms\\frmteachermanageexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\teacherforms\\frmteachermanageexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\examination_system\\presentation\\teacherforms\\frmteachermanageexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\teacherforms\\frmteachermanageexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\adminforms\\frmadminmanagestudents.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminmanagestudents.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\appsettings.json||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\appsettings.json||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|d:\\iti\\windows forms\\project\\examination\\examination_system\\examination_system\\presentation\\adminforms\\frmadminreports.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3765254-D8C9-439C-A7DC-D06EC892ED72}|Examination_System\\Examination_System.csproj|solutionrelative:examination_system\\presentation\\adminforms\\frmadminreports.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\frmLogin.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\frmLogin.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\frmLogin.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAcwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T20:37:41.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\frmLogin.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\frmLogin.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\frmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T20:27:22.273Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appSettings.json",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\appSettings.json",
+              "RelativeDocumentMoniker": "Examination_System\\appSettings.json",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\appSettings.json",
+              "RelativeToolTip": "Examination_System\\appSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-12T20:24:00.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmAdminDashboard.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminDashboard.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminDashboard.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminDashboard.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminDashboard.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAA0wDMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:21:57.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmTeacherDashboard.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherDashboard.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\TeacherForms\\frmTeacherDashboard.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherDashboard.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\TeacherForms\\frmTeacherDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:26:22.727Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmTeacherDashboard.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherDashboard.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\TeacherForms\\frmTeacherDashboard.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherDashboard.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\TeacherForms\\frmTeacherDashboard.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:29:31.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmAdminDashboard.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminDashboard.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminDashboard.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminDashboard.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:21:53.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmAdminProfile.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminProfile.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminProfile.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminProfile.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminProfile.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwCQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:04:36.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmAdminProfile.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminProfile.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminProfile.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminProfile.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminProfile.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:48:51.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmAdminReports.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminReports.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminReports.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminReports.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminReports.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:13:23.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmAdminReports.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminReports.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminReports.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminReports.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminReports.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:13:06.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmAdminReport1.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminReport1.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminReport1.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminReport1.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminReport1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:13:04.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmAdminManageTeachers.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageTeachers.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminManageTeachers.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageTeachers.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminManageTeachers.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA4wBYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:36:14.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmAdminManageStudents.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAIwBoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:37:36.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmAdminManageTeachers.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageTeachers.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminManageTeachers.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageTeachers.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminManageTeachers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:45:40.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmAdminManageStudents.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:33:21.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frmAdminManageExams.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageExams.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminManageExams.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageExams.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminManageExams.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA4wBYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:34:24.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmAdminManageExams.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageExams.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminManageExams.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageExams.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminManageExams.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:14:28.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmStudentProfile.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentProfile.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\StudentForms\\frmStudentProfile.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentProfile.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\StudentForms\\frmStudentProfile.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAmwB4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:34:11.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "frmStudentExamsHistory.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentExamsHistory.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\StudentForms\\frmStudentExamsHistory.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentExamsHistory.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\StudentForms\\frmStudentExamsHistory.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA4wBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:34:08.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "frmStudentExam.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentExam.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\StudentForms\\frmStudentExam.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentExam.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\StudentForms\\frmStudentExam.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA4wBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:34:04.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "frmStudentProfile.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentProfile.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\StudentForms\\frmStudentProfile.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentProfile.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\StudentForms\\frmStudentProfile.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:26:22.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "frmStudentCourses.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentCourses.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\StudentForms\\frmStudentCourses.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentCourses.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\StudentForms\\frmStudentCourses.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA4wBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:34:01.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "frmStudentExamsHistory.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentExamsHistory.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\StudentForms\\frmStudentExamsHistory.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentExamsHistory.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\StudentForms\\frmStudentExamsHistory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:26:22.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "frmTeacherReports.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherReports.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\TeacherForms\\frmTeacherReports.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherReports.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\TeacherForms\\frmTeacherReports.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA0wBsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:23:29.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "frmStudentExam.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentExam.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\StudentForms\\frmStudentExam.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentExam.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\StudentForms\\frmStudentExam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:26:22.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "frmTeacherReports.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherReports.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\TeacherForms\\frmTeacherReports.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherReports.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\TeacherForms\\frmTeacherReports.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:12:47.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "frmStudentCourses.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentCourses.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\StudentForms\\frmStudentCourses.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\StudentForms\\frmStudentCourses.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\StudentForms\\frmStudentCourses.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:26:22.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "frmTeacherReport1.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherReport1.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\TeacherForms\\frmTeacherReport1.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherReport1.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\TeacherForms\\frmTeacherReport1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:33:45.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "frmTeacherManageStudents.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherManageStudents.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\TeacherForms\\frmTeacherManageStudents.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherManageStudents.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\TeacherForms\\frmTeacherManageStudents.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA4wBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:33:40.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "frmTeacherProfile.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherProfile.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\TeacherForms\\frmTeacherProfile.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherProfile.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\TeacherForms\\frmTeacherProfile.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:23:20.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "frmTeacherProfile.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherProfile.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\TeacherForms\\frmTeacherProfile.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherProfile.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\TeacherForms\\frmTeacherProfile.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:27:14.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "frmTeacherManageStudents.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherManageStudents.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\TeacherForms\\frmTeacherManageStudents.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherManageStudents.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\TeacherForms\\frmTeacherManageStudents.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:33:38.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "frmTeacherManageExam.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherManageExam.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\TeacherForms\\frmTeacherManageExam.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherManageExam.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\TeacherForms\\frmTeacherManageExam.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAmwBoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:33:36.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "frmTeacherManageExam.cs [Design]",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherManageExam.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\TeacherForms\\frmTeacherManageExam.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\TeacherForms\\frmTeacherManageExam.cs [Design]",
+              "RelativeToolTip": "Examination_System\\Presentation\\TeacherForms\\frmTeacherManageExam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:33:34.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "frmAdminManageStudents.Designer.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.Designer.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.Designer.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.Designer.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminManageStudents.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:46:48.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "appSettings.json",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\appSettings.json",
+              "RelativeDocumentMoniker": "Examination_System\\appSettings.json",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\appSettings.json",
+              "RelativeToolTip": "Examination_System\\appSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-12T06:27:15.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "frmAdminReports.Designer.cs",
+              "DocumentMoniker": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminReports.Designer.cs",
+              "RelativeDocumentMoniker": "Examination_System\\Presentation\\AdminForms\\frmAdminReports.Designer.cs",
+              "ToolTip": "D:\\Iti\\Windows Forms\\Project\\Examination\\Examination_System\\Examination_System\\Presentation\\AdminForms\\frmAdminReports.Designer.cs",
+              "RelativeToolTip": "Examination_System\\Presentation\\AdminForms\\frmAdminReports.Designer.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAkwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:14:15.548Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{007a3a6b-b5b2-454d-a2bd-cf929f989be2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
