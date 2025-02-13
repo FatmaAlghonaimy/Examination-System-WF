@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Examination_System.Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,24 +13,21 @@ namespace Examination_System.Presentation
 {
     public partial class frmStudentProfile : Form
     {
-        public frmLogin frmLogin;
         public frmStudentProfile()
         {
             InitializeComponent();
-            frmLogin = new frmLogin();
 
         }
         public frmStudentProfile(frmLogin _frmLogin)
         {
             InitializeComponent();
-            frmLogin = _frmLogin;
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmLogin?.Show();
+            General.frmLogin.Show();
         }
 
         private void btn_history_Click(object sender, EventArgs e)
@@ -42,7 +40,8 @@ namespace Examination_System.Presentation
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmLogin.Show();
+            UserService.Logout();
+            General.frmLogin.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

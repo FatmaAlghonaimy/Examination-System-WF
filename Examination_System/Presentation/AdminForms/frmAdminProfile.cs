@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Examination_System.Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,30 +13,29 @@ namespace Examination_System.Presentation
 {
     public partial class frmAdminProfile : Form
     {
-        public frmLogin frmLogin;
         public frmAdminProfile()
         {
             InitializeComponent();
-            frmLogin = new frmLogin();
         }
-        public frmAdminProfile(frmLogin _frmLogin)
-        {
-            InitializeComponent();
-            frmLogin = _frmLogin;
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmLogin?.Show();
-
-
+            General.frmLogin.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
             new frmAdminDashboard().Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            UserService.Logout();
+            General.frmLogin.Show();
         }
     }
 }
