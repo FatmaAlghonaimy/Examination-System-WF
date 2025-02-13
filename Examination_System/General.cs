@@ -9,6 +9,7 @@ namespace Examination_System
 {
     static class General
     {
-       static public User LoggedUser { get; set; } = new User() { Id = 1 };
+       static public User LoggedUser { get; set; }
+        public static frmLogin frmLogin { get; set; }
     }
 }
