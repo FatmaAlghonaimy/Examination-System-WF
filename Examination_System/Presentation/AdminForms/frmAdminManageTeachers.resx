@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>في الصفحة دي الادمين هيشوف كل المدرسين في جدول وجمب كل صف فيه برضه تلت زراير delete edit details يقدر من خلالهتا الالدمن يكريت او يحذف او يشوف تفاصيل كل مدرس كل زرار طبعا بيفتح فورم سواء ايديت او ديليت هيفتح مثلا ماسج بوكس تاكيد قبل الحذف و الديتايلز هتفتح فورم </value>
-  </data>
+  <metadata name="cmb_Cources.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
 </root>
