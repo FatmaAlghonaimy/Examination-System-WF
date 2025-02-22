@@ -302,6 +302,8 @@ namespace Examination_System.Data_Access
                             Direction = ParameterDirection.Output
                         };
                         cmd.Parameters.Add(outputStatus);
+
+                        
                         con.Open();
 
                         cmd.ExecuteNonQuery(); // Use ExecuteNonQuery since no result set is returned

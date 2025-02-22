@@ -1,4 +1,5 @@
 ﻿using Examination_System.Business.Enums;
+using ExaminationSystem.Business.Enums;
 using ExaminationSystem.Business.ExamQuestionService;
 
 using ExaminationSystem.Business.QuestionService;
@@ -10,6 +11,7 @@ namespace ExaminationSystem.Presentation
 {
     public partial class FormInsertQuestionsToExam : Form
     {
+        string filter = "where  ";
         private Exam _exam;
         private QuestionList selectedQuestions = []; 
         private QuestionList removedQuestions = [];
@@ -33,6 +35,7 @@ namespace ExaminationSystem.Presentation
         }
         private void LoadQuestionTypes()
         {
+            
             QuestionTypes.Items.Clear(); 
 
             foreach (QuestionType type in Enum.GetValues(typeof(QuestionType)))
@@ -107,6 +110,8 @@ namespace ExaminationSystem.Presentation
                     column.Visible = false;
                 }
             }
+
+
         }
 
         private void LoadExamQuestions()

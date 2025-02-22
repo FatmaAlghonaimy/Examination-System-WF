@@ -49,6 +49,9 @@
     <Compile Update="Presentation\AdminForms\Teacher_Info_Report.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Presentation\Common\ToastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Presentation\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>

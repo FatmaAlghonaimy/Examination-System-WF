@@ -10,22 +10,12 @@ namespace Examination_System.Business
 {
     public static class UserService
     {
-        public static Tuple<string, User> Login(string usernameOrEmail, string password)
+        public static Tuple<int, User> Login(string usernameOrEmail, string password)
         {
 			try
 			{
-                Tuple<int, User> result = UserRepository.GetLogin(usernameOrEmail, password);
-                switch (result.Item1)
-                {
-                    case 0:
-                        return (new Tuple<string, User>("Login successful.", result.Item2));
-                    case 1:
-                        return (new Tuple<string, User>("Invalid username or email.", result.Item2));
-                    case 2:
-                        return (new Tuple<string, User>("Incorrect password.", result.Item2));
-                    default:
-                        return (new Tuple<string, User>("Unknown error.", result.Item2));
-                }
+                return UserRepository.GetLogin(usernameOrEmail, password);
+                
             }
 			catch (Exception ex)
 			{
@@ -44,25 +34,37 @@ namespace Examination_System.Business
             try
             {
                 int result = UserRepository.UpdateUserData(updatedData);
-                switch (result)
-                {
-                    case 0:
-                        return (new Tuple<string, int>("Error: Data was not saved", result));
-                    case 1:
-                        return (new Tuple<string, int>("Success: Data was saved successfully!", result));
 
-                    case -1:
-                        return (new Tuple<string, int>("User was not found", result));
+                switch ((UserErrorMessage)result)
+                {
+                    case UserErrorMessage.NotApplied:
+                        return new Tuple<string, int>("Error: Data was not saved.", result);
+
+                    case UserErrorMessage.Suceeded:
+                        return new Tuple<string, int>("Success: Data was saved successfully!", result);
+
+                    case UserErrorMessage.NotFound:
+                        return new Tuple<string, int>("Error: User was not found.", result);
+
+                    case UserErrorMessage.NotUniqueUsername:
+                        return new Tuple<string, int>("Error: Username is already taken. Please choose another one.", result);
+
+                    case UserErrorMessage.NotUniqueEmail:
+                        return new Tuple<string, int>("Error: Email is already registered. Please use a different email.", result);
+
+                    case UserErrorMessage.NotUniqueSSN:
+                        return new Tuple<string, int>("Error: SSN is already in use. Please enter a valid SSN.", result);
+
+                    case UserErrorMessage.ConstraintViolation:
+                        return new Tuple<string, int>("Error: Data update failed due to constraint violation.", result);
 
                     default:
-                        return (new Tuple<string, int>("Unknown error.", result));
-                       
+                        return new Tuple<string, int>("Unknown error occurred.", result);
                 }
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                return new Tuple<string, int>($"Unexpected error: {ex.Message}", -99);
             }
         }
         public static void SetUserImage(PictureBox pic, User user)

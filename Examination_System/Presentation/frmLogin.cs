@@ -2,6 +2,7 @@ using Examination_System.Business;
 using Examination_System.Business.Enums;
 using Examination_System.Data_Access.Models;
 using Examination_System.Presentation;
+using Examination_System.Presentation.Common;
 
 namespace Examination_System
 {
@@ -48,8 +49,23 @@ namespace Examination_System
         {
             try
             {
-                Tuple<string, User> result = UserService.Login(tx_username.Text.Trim(), tx_pass.Text.Trim());
-                MessageBox.Show(result.Item1);
+                Tuple<int, User> result = UserService.Login(tx_username.Text.Trim(), tx_pass.Text.Trim());
+                switch (result.Item1)
+                {
+                    case 0:
+                        new ToastForm(ToastType.Success, "Login successful.").Show();
+                        break;
+                    case 1:
+                        new ToastForm(ToastType.Error, "Invalid username or email.").Show();
+                        break;
+                    case 2:
+                        new ToastForm(ToastType.Success, "Incorrect password.").Show();
+                        break; 
+                    default:
+                        new ToastForm(ToastType.Success, "Unknown error.").Show();
+                        break;
+                }
+                
                 General.LoggedUser = result.Item2;
                 if (result.Item2.Username != null && result.Item2.ID != 0)
                 {
@@ -81,7 +97,7 @@ namespace Examination_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                new ToastForm(ToastType.Error, ex.Message).Show();
                 throw;
             }
         }

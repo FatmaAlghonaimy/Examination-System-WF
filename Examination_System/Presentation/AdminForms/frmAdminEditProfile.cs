@@ -64,7 +64,7 @@ namespace Examination_System.Presentation
             try
             {
                 result = UserService.UpdateUserData(updatedUser);
-                if (result.Item2 == 1)
+                if (result.Item2 == ((int)UserErrorMessage.Suceeded))
                 {
                     if(user.ID == General.LoggedUser.ID)
                     {
@@ -83,15 +83,15 @@ namespace Examination_System.Presentation
                 }
                 else
                 {
-                    MessageBox.Show(result.Item1, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                    if(returnForm == ReturnForm.frmAdminProfile)
-                    {
-                        new frmAdminProfile().Show();
-                    } else if(returnForm == ReturnForm.frmAdminManageStudents)
-                    {
-                        new frmAdminManageStudents().Show();
-                    }
+                    MessageBox.Show(result.Item1, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //this.Close();
+                    //if(returnForm == ReturnForm.frmAdminProfile)
+                    //{
+                    //    new frmAdminProfile().Show();
+                    //} else if(returnForm == ReturnForm.frmAdminManageStudents)
+                    //{
+                    //    new frmAdminManageStudents().Show();
+                    //}
                 }
 
             }
