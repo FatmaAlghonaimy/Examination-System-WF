@@ -59,10 +59,10 @@ namespace Examination_System
                         new ToastForm(ToastType.Error, "Invalid username or email.").Show();
                         break;
                     case 2:
-                        new ToastForm(ToastType.Success, "Incorrect password.").Show();
+                        new ToastForm(ToastType.Error, "Incorrect password.").Show();
                         break; 
                     default:
-                        new ToastForm(ToastType.Success, "Unknown error.").Show();
+                        new ToastForm(ToastType.Error, "Unknown error.").Show();
                         break;
                 }
                 

@@ -18,6 +18,8 @@ namespace ExaminationSystem.Data_Access
     internal class ExamRepository
     {
         private static readonly string connectionString = General.connectionString;
+        private static readonly SqlConnection con = new SqlConnection(connectionString);
+
         private static  DatabaseHelper dl = new DatabaseHelper();
         public static int CreateExam(Exam exam)
         {
@@ -68,6 +70,48 @@ namespace ExaminationSystem.Data_Access
             }
         }
 
+        public static DataTable select(SqlCommand _cmd)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(_cmd);
+                _cmd.Connection = con;
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex ;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open) con.Close();
+            }
+        }
+
+        public static int DML(SqlCommand _cmd)
+        {
+            try
+            {
+                int result = 0;
+                _cmd.Connection = con;
+                con.Open();
+                result = _cmd.ExecuteNonQuery();
+                con.Close();
+                return result;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open) con.Close();
+            }
+        }
         public static DataTable GetExamById(int examID)
         {
             string query = $"SELECT * FROM Exam WHERE ID = {examID}";
