@@ -128,11 +128,11 @@
             cmbCourseName.Size = new Size(151, 28);
             cmbCourseName.TabIndex = 16;
             // 
-            // formAddQuestionWithAnswers
+            // FormAddQuestionWithAnswers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(955, 556);
+            ClientSize = new Size(980, 579);
             Controls.Add(label4);
             Controls.Add(cmbCourseName);
             Controls.Add(MarksUpDown);
@@ -143,7 +143,7 @@
             Controls.Add(button1);
             Controls.Add(cmbQuestionTypes);
             Controls.Add(txtQuestionBody);
-            Name = "formAddQuestionWithAnswers";
+            Name = "FormAddQuestionWithAnswers";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)MarksUpDown).EndInit();
             ResumeLayout(false);

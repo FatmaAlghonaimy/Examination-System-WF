@@ -11,7 +11,6 @@ namespace ExaminationSystem.Presentation
 {
     public partial class FormInsertQuestionsToExam : Form
     {
-        string filter = "where  ";
         private Exam _exam;
         private QuestionList selectedQuestions = []; 
         private QuestionList removedQuestions = [];

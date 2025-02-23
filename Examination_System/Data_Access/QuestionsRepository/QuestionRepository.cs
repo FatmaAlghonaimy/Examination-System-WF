@@ -3,7 +3,6 @@ using Examination_System.Business.Enums;
 
 using ExaminationSystem.Data_Access.Models;
 using Microsoft.Data.SqlClient;
-
 using System.Data;
 
 
@@ -11,6 +10,7 @@ namespace ExaminationSystem.Data_Access
 {
     internal class QuestionRepository
     {
+
         public static int AddQuestion(Question question, SqlConnection connection, SqlTransaction transaction)
         {
             SqlCommand cmd = new SqlCommand("AddQuestion", connection, transaction)
@@ -46,6 +46,22 @@ namespace ExaminationSystem.Data_Access
             }
             return dataTable;
         }
+
+        public static DataTable GetAllQuestionByCourseID(int CourseID)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection con = new(General.connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("GetAllQuestionByCourseID", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@CourseID", CourseID);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dataTable);
+                }
+            }
+            return dataTable;
+        }
         public static DataTable GetAllQuestionsNotInExambyCourseID(int CourseID, int ExamID, List<QuestionType>? questionType = null)
         {
             DataTable dataTable = new DataTable();
@@ -67,6 +83,13 @@ namespace ExaminationSystem.Data_Access
                 }
             }
             return dataTable;
+        }
+
+        public static DataTable GetAllQuestions()
+        {
+            string query = "SELECT * FROM Questions";
+            DatabaseHelper db = new();
+            return db.Executequery(query);
         }
     }
 }

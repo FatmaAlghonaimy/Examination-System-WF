@@ -1,7 +1,7 @@
 ﻿using ExaminationSystem.Data_Access;
 using ExaminationSystem.Data_Access.Models;
-using Microsoft.Data.SqlClient;
 using System.Data;
+using Microsoft.Data.SqlClient;
 
 
 namespace ExaminationSystem.Business.ExamService
@@ -100,6 +100,10 @@ namespace ExaminationSystem.Business.ExamService
             };
 
             return _dl.ExecuteStoredProcedure("getCoursesWhichHaveExams", parameters);
+        }
+        public static DataTable GetExamByID(int examID)
+        {
+            return ExamRepository.GetExamById(examID);
         }
     }
 }

@@ -42,5 +42,17 @@ namespace ExaminationSystem.Business.QuestionService
         {
             return QuestionRepository.GetAllQuestionsNotInExambyCourseID(CourseID, ExamID, questionTypes);
         }
+        public static DataTable GetAllQuestionByCourseID(int CourseID)
+        {
+            return QuestionRepository.GetAllQuestionByCourseID(CourseID);
+        }
+        public static DataTable GetAllQuestions()
+        {
+            return QuestionRepository.GetAllQuestions();
+        }
+        //public static DataTable GetQuestionsByType(List<QuestionType> type) 
+        //{
+        //    return QuestionRepository.GetQuestionsByType(type);
+        //}
     }
 }
