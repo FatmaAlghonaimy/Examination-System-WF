@@ -10,11 +10,13 @@ namespace Examination_System
 {
     static class General
     {
-        static public User LoggedUser { get; set; }
+        static public User LoggedUser { get; set; } = new User() { ID =11 };
         public static string connectionString { get; set; } = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
                           .AddJsonFile("appSettings.json")
-                          .Build().GetSection("sqlConnection").Value;
+                          .Build().GetSection("sqlConnectionFatma").Value;
         public static string rootPath =  Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
         public static frmLogin frmLogin { get; set; }
+        public static string primarycolor { get; set; } = "#db444";
+
     }
 }

@@ -4,6 +4,9 @@
     <Compile Update="CombinedDateTimePicker.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="leftPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Presentation\AdminForms\CreateNewTheacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +113,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Presentation\TeacherForms\frmTeacherReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\UserControlTryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Teacher_Info_Report.cs">

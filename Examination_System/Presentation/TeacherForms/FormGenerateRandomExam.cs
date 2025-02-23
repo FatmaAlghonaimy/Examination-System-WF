@@ -1,7 +1,10 @@
 ﻿
 using Examination_System.Business.Enums;
 using ExaminationSystem.Business.ExamQuestionService;
+using ExaminationSystem.Business.ExamService;
+using ExaminationSystem.Data_Access;
 using ExaminationSystem.Data_Access.Models;
+using System.Data;
 
 
 namespace ExaminationSystem.Presentation
@@ -58,7 +61,13 @@ namespace ExaminationSystem.Presentation
             questions.AddRange(questionsTF);
             questions.AddRange(questionsCO);
             questions.AddRange(questionsCM);
+            _exam.QuestionList = questions;
             ExamQuestionService.SaveExamQuestions(_exam.ID, questions);
+            DataTable exam = ExamRepository.GetExamById(_exam.ID);
+            if (exam.Rows.Count > 0)
+            {
+                _exam.Marks = Convert.ToInt32(exam.Rows[0]["TotalMarks"]);
+            }
             FormExamPreview formExamPreview = new FormExamPreview(_exam);
             formExamPreview.ShowDialog();
 
