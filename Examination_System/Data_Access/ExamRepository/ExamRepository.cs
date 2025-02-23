@@ -18,6 +18,7 @@ namespace ExaminationSystem.Data_Access
     internal class ExamRepository
     {
         private static readonly string connectionString = General.connectionString;
+        private static  DatabaseHelper dl = new DatabaseHelper();
         public static int CreateExam(Exam exam)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -65,6 +66,12 @@ namespace ExaminationSystem.Data_Access
                     }
                 }
             }
+        }
+
+        public static DataTable GetExamById(int examID)
+        {
+            string query = $"SELECT * FROM Exam WHERE ID = {examID}";
+            return dl.Executequery(query);
         }
     }
 }

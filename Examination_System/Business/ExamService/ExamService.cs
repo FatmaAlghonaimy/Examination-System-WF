@@ -75,5 +75,9 @@ namespace ExaminationSystem.Business.ExamService
 
             return _dl.ExecuteStoredProcedure("getCoursesWhichHaveExams", parameters);
         }
+        public static DataTable GetExamByID(int examID)
+        {
+            return ExamRepository.GetExamById(examID);
+        }
     }
 }
