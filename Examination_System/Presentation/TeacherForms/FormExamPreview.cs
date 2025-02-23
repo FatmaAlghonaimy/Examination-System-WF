@@ -25,7 +25,8 @@ namespace ExaminationSystem.Presentation
         }
         private QuestionList LoadQuestions()
         {
-            return QuestionService.GetQuestionsListbyExamID(_exam.ID);
+            return _exam.QuestionList;
+            //return QuestionService.GetQuestionsListbyExamID(_exam.ID);
         }
         private void LoadExamInfo()
         {
