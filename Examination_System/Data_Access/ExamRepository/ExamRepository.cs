@@ -18,6 +18,7 @@ namespace ExaminationSystem.Data_Access
     internal class ExamRepository
     {
         private static readonly string connectionString = General.connectionString;
+        private static readonly SqlConnection con = new SqlConnection(connectionString);
         public static int CreateExam(Exam exam)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -64,6 +65,49 @@ namespace ExaminationSystem.Data_Access
                         transaction.Dispose();
                     }
                 }
+            }
+        }
+
+        public static DataTable select(SqlCommand _cmd)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(_cmd);
+                _cmd.Connection = con;
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex ;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open) con.Close();
+            }
+        }
+
+        public static int DML(SqlCommand _cmd)
+        {
+            try
+            {
+                int result = 0;
+                _cmd.Connection = con;
+                con.Open();
+                result = _cmd.ExecuteNonQuery();
+                con.Close();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open) con.Close();
             }
         }
     }

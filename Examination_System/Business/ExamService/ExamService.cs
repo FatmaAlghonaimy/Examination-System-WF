@@ -23,7 +23,33 @@ namespace ExaminationSystem.Business.ExamService
                 return false;
             }
         }
+        public static DataTable GetExamById(int id)
+        {
+            using (SqlCommand cmd = new SqlCommand(@$"Select [ID]
+      ,[CourseID]
+      ,[ExamType]
+      ,[StartTime]
+      ,[EndTime]
+      ,case
+	  when [Status] = 0 then 'Pending'
+	  when [Status] = 1 then 'Started'
+	  else 'Finished' end as Status
+      ,[NoOFQuestions]
+      ,[Duration]
+      ,[TotalMarks]
+        FROM [FatmaLast].[dbo].[Exam]"))
+            {
+                try
+                {
+                    return ExamRepository.select(cmd);
+                }
+                catch (Exception ex)
+                {
 
+                    throw ex;
+                }
+            }
+        }
         DatabaseHelper _dl;
 
         public ExamService()

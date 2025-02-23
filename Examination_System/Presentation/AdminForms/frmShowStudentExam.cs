@@ -3,8 +3,8 @@ using Examination_System.Business.Enums;
 using iTextSharp.text.pdf;
 using iTextSharp.text;
 using System.Data;
-
-
+using System.Windows.Forms;
+using ExaminationSystem.Business.ExamService;
 
 namespace Examination_System.Presentation.AdminForms
 {
@@ -12,12 +12,37 @@ namespace Examination_System.Presentation.AdminForms
     {
         private int studentId;
         private int examId;
+        private DataTable dtStudentAnswers;
+
         public frmShowStudentExam(int _studentId, int _examId)
         {
             InitializeComponent();
             studentId = _studentId;
             examId = _examId;
+            LoadExamDetails();
+            LoadStudentAnswers();
             LoadQuestions();
+        }
+
+        private int totalMarks;
+
+        private void LoadExamDetails()
+        {
+            DataTable exam = ExamService.GetExamById(examId);
+            var student = UserService.GetUsrById(studentId);
+            lb_examtitle.Text = $"Student: {student.Fullname}";
+
+            // Fetch and store the total marks for the exam
+            if (exam.Rows.Count > 0)
+            {
+                totalMarks = Convert.ToInt32(exam.Rows[0]["TotalMarks"]);
+            }
+        }
+
+        private void LoadStudentAnswers()
+        {
+            // Fetch student answers from the Submit table
+            dtStudentAnswers = UserService.GetStudentAnswers(studentId, examId);
         }
 
         private void LoadQuestions()
@@ -52,14 +77,23 @@ namespace Examination_System.Presentation.AdminForms
                 separator.Margin = new Padding(0, 10, 0, 10);
                 flowLayoutPanelQuestions.Controls.Add(separator);
             }
-        }
 
+            // Calculate and display the result
+            int studentMarks = CalculateStudentMarks();
+            lb_result.Text = $"Marks Obtained: {studentMarks} / Total Marks: {totalMarks}";
+        }
 
         private void LoadAnswers(int questionId, QuestionType questionType, FlowLayoutPanel panel)
         {
             DataTable dtAnswers = UserService.GetStudentExamQuestionAnswers(questionId);
 
-            if (questionType == QuestionType.SingleChoice)
+            // Get the correct answer(s) for the question
+            DataRow[] correctAnswerRows = dtAnswers.Select("IsCorrect = true");
+
+            // Get the student's answer for the question
+            DataRow[] studentAnswerRows = dtStudentAnswers.Select($"QuestionId = {questionId}");
+
+            if (questionType == QuestionType.SingleChoice || questionType == QuestionType.TrueOrFalse)
             {
                 RadioButton[] radioButtons = new RadioButton[dtAnswers.Rows.Count];
                 for (int i = 0; i < dtAnswers.Rows.Count; i++)
@@ -67,8 +101,31 @@ namespace Examination_System.Presentation.AdminForms
                     radioButtons[i] = new RadioButton
                     {
                         Text = dtAnswers.Rows[i]["AnswerText"].ToString(),
-                        AutoSize = true
+                        AutoSize = true,
+                        Enabled = false // Disable the control
                     };
+
+                    // Check if this answer is the student's answer
+                    if (studentAnswerRows.Length > 0 && studentAnswerRows[0]["AnswerId"].ToString() == dtAnswers.Rows[i]["Id"].ToString())
+                    {
+                        radioButtons[i].Checked = true;
+
+                        // Check if the student's answer is correct
+                        bool isCorrect = correctAnswerRows.Any(row => row["Id"].ToString() == dtAnswers.Rows[i]["Id"].ToString());
+                        if (!isCorrect)
+                        {
+                            // Mark incorrect student answer in red
+                            Label lblIncorrect = new Label
+                            {
+                                Text = "✗",
+                                ForeColor = Color.Red,
+                                AutoSize = true,
+                                Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold)
+                            };
+                            panel.Controls.Add(lblIncorrect);
+                        }
+                    }
+
                     panel.Controls.Add(radioButtons[i]);
                 }
             }
@@ -80,84 +137,156 @@ namespace Examination_System.Presentation.AdminForms
                     checkBoxes[i] = new CheckBox
                     {
                         Text = dtAnswers.Rows[i]["AnswerText"].ToString(),
-                        AutoSize = true
+                        AutoSize = true,
+                        Enabled = false // Disable the control
                     };
-                    panel.Controls.Add(checkBoxes[i]);
-                }
-            }
-            else if (questionType == QuestionType.TrueOrFalse)
-            {
-                RadioButton rbTrue = new RadioButton { Text = "True", AutoSize = true };
-                RadioButton rbFalse = new RadioButton { Text = "False", AutoSize = true };
-                panel.Controls.Add(rbTrue);
-                panel.Controls.Add(rbFalse);
-            }
 
-        }
-
-        
-
-private void btnExportPDF_Click(object sender, EventArgs e)
-    {
-        SaveFileDialog saveFileDialog = new SaveFileDialog();
-        saveFileDialog.Filter = "PDF Files|*.pdf";
-        saveFileDialog.Title = "Save Exam as PDF";
-        saveFileDialog.FileName = "Exam.pdf";
-
-        if (saveFileDialog.ShowDialog() == DialogResult.OK)
-        {
-            try
-            {
-                using (FileStream stream = new FileStream(saveFileDialog.FileName, FileMode.Create))
-                {
-                    Document pdfDoc = new Document(PageSize.A4);
-                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
-                    pdfDoc.Open();
-
-                    // Add Title
-                    iTextSharp.text.Font titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 18);
-                    Paragraph title = new Paragraph("Student Exam", titleFont);
-                    title.Alignment = Element.ALIGN_CENTER;
-                    pdfDoc.Add(title);
-
-                    pdfDoc.Add(new Paragraph("\n"));
-
-                    // Loop through the questions
-                    foreach (Control control in flowLayoutPanelQuestions.Controls)
+                    // Check if this answer is the student's answer
+                    if (studentAnswerRows.Length > 0 && studentAnswerRows[0]["AnswerId"].ToString() == dtAnswers.Rows[i]["Id"].ToString())
                     {
-                        if (control is FlowLayoutPanel panel)
+                        checkBoxes[i].Checked = true;
+
+                        // Check if the student's answer is correct
+                        bool isCorrect = correctAnswerRows.Any(row => row["Id"].ToString() == dtAnswers.Rows[i]["Id"].ToString());
+                        if (!isCorrect)
                         {
-                            foreach (Control innerControl in panel.Controls)
+                            // Mark incorrect student answer in red
+                            Label lblIncorrect = new Label
                             {
-                                if (innerControl is Label lblQuestion)
-                                {
-                                        iTextSharp.text.Font questionFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14);
-                                    pdfDoc.Add(new Paragraph(lblQuestion.Text, questionFont));
-                                }
-                                else if (innerControl is RadioButton radio)
-                                {
-                                    pdfDoc.Add(new Paragraph("  ○ " + radio.Text));
-                                }
-                                else if (innerControl is CheckBox checkBox)
-                                {
-                                    pdfDoc.Add(new Paragraph("  ☑ " + checkBox.Text));
-                                }
-                            }
-                            pdfDoc.Add(new Paragraph("\n"));
+                                Text = "✗",
+                                ForeColor = Color.Red,
+                                AutoSize = true,
+                                Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold)
+                            };
+                            panel.Controls.Add(lblIncorrect);
                         }
                     }
 
-                    pdfDoc.Close();
+                    panel.Controls.Add(checkBoxes[i]);
                 }
-
-                MessageBox.Show("Exam exported successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+
+            // Add correct answer indicator in green
+            foreach (DataRow correctRow in correctAnswerRows)
             {
-                MessageBox.Show("Error: " + ex.Message, "Export Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Label lblCorrectAnswer = new Label
+                {
+                    Text = $"✓ {correctRow["AnswerText"].ToString()}",
+                    ForeColor = Color.Green,
+                    AutoSize = true,
+                    Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold),
+                    Margin = new Padding(10, 0, 0, 0)
+                };
+                panel.Controls.Add(lblCorrectAnswer);
+            }
+        }
+
+        private int CalculateStudentMarks()
+        {
+            int studentMarks = 0;
+
+            // Loop through all questions
+            DataTable dtQuestions = UserService.GetStudentExamQuestions(studentId, examId);
+            foreach (DataRow questionRow in dtQuestions.Rows)
+            {
+                int questionId = Convert.ToInt32(questionRow["Id"]);
+                QuestionType questionType = (QuestionType)(Byte)questionRow["QuestionType"];
+
+                // Get the correct answers for the question
+                DataTable dtAnswers = UserService.GetStudentExamQuestionAnswers(questionId);
+                DataRow[] correctAnswerRows = dtAnswers.Select("IsCorrect = true");
+
+                // Get the student's answer for the question
+                DataRow[] studentAnswerRows = dtStudentAnswers.Select($"QuestionId = {questionId}");
+
+                if (studentAnswerRows.Length > 0)
+                {
+                    // Check if the student's answer is correct
+                    bool isCorrect = false;
+                    if (questionType == QuestionType.SingleChoice || questionType == QuestionType.TrueOrFalse)
+                    {
+                        // For single-choice or true/false questions, check if the student's answer matches any correct answer
+                        isCorrect = correctAnswerRows.Any(row => row["Id"].ToString() == studentAnswerRows[0]["AnswerId"].ToString());
+                    }
+                    else if (questionType == QuestionType.MultipleChoice)
+                    {
+                        // For multiple-choice questions, ensure all selected answers are correct
+                        var studentAnswerIds = studentAnswerRows.Select(row => row["AnswerId"].ToString()).ToList();
+                        var correctAnswerIds = correctAnswerRows.Select(row => row["Id"].ToString()).ToList();
+                        isCorrect = studentAnswerIds.All(id => correctAnswerIds.Contains(id)) &&
+                                    correctAnswerIds.All(id => studentAnswerIds.Contains(id));
+                    }
+
+                    // If the answer is correct, add marks
+                    if (isCorrect)
+                    {
+                        studentMarks += 1; // Assuming each question carries 1 mark
+                    }
+                }
+            }
+
+            return studentMarks;
+        }
+        private void btnExportPDF_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF Files|*.pdf";
+            saveFileDialog.Title = "Save Exam as PDF";
+            saveFileDialog.FileName = "Exam.pdf";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (FileStream stream = new FileStream(saveFileDialog.FileName, FileMode.Create))
+                    {
+                        Document pdfDoc = new Document(PageSize.A4);
+                        PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                        pdfDoc.Open();
+
+                        // Add Title
+                        iTextSharp.text.Font titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 18);
+                        Paragraph title = new Paragraph("Student Exam", titleFont);
+                        title.Alignment = Element.ALIGN_CENTER;
+                        pdfDoc.Add(title);
+
+                        pdfDoc.Add(new Paragraph("\n"));
+
+                        // Loop through the questions
+                        foreach (Control control in flowLayoutPanelQuestions.Controls)
+                        {
+                            if (control is FlowLayoutPanel panel)
+                            {
+                                foreach (Control innerControl in panel.Controls)
+                                {
+                                    if (innerControl is Label lblQuestion)
+                                    {
+                                        iTextSharp.text.Font questionFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14);
+                                        pdfDoc.Add(new Paragraph(lblQuestion.Text, questionFont));
+                                    }
+                                    else if (innerControl is RadioButton radio)
+                                    {
+                                        pdfDoc.Add(new Paragraph("  ○ " + radio.Text));
+                                    }
+                                    else if (innerControl is CheckBox checkBox)
+                                    {
+                                        pdfDoc.Add(new Paragraph("  ☑ " + checkBox.Text));
+                                    }
+                                }
+                                pdfDoc.Add(new Paragraph("\n"));
+                            }
+                        }
+
+                        pdfDoc.Close();
+                    }
+
+                    MessageBox.Show("Exam exported successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Export Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
-
-}
 }

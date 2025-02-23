@@ -10,6 +10,44 @@ namespace Examination_System.Business
 {
     public static class UserService
     {
+        public static DataTable GetStudentAnswers(int studentId, int examId)
+        {
+            DataTable dtStudentAnswers = new DataTable();
+
+           
+            try
+            {
+
+                // SQL query to retrieve the student's answers
+                string query = @"
+                    SELECT 
+                        QuestionId, 
+                        AnswerId 
+                    FROM 
+                        Submit 
+                    WHERE 
+                        StudentId = @StudentId 
+                        AND ExamId = @ExamId";
+
+                using (SqlCommand command = new SqlCommand(query))
+                {
+                    // Add parameters to prevent SQL injection
+                    command.Parameters.AddWithValue("@StudentId", studentId);
+                    command.Parameters.AddWithValue("@ExamId", examId);
+
+                    dtStudentAnswers = UserRepository.UserDAL(command);
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Handle database exceptions (e.g., log the error)
+                throw new Exception("An error occurred while fetching student answers: " + ex.Message);
+            }
+          
+            
+
+            return dtStudentAnswers;
+        }
         public static Tuple<int, User> Login(string usernameOrEmail, string password)
         {
 			try
