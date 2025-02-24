@@ -101,9 +101,28 @@ namespace ExaminationSystem.Business.ExamService
 
             return _dl.ExecuteStoredProcedure("getCoursesWhichHaveExams", parameters);
         }
-        public static DataTable GetExamByID(int examID)
+        public DataTable FilterExams(int teacherId, DateTime? startDate, DateTime? endDate,
+                             List<int>? statusList, List<int>? typeList, List<string>? courses)
         {
-            return ExamRepository.GetExamById(examID);
+            SqlParameter[] parameters = {
+        new SqlParameter("@teacherid", SqlDbType.Int) { Value = teacherId },
+
+
+        new SqlParameter("@startDate", SqlDbType.DateTime) { Value = startDate.HasValue ? startDate.Value : (object)DBNull.Value },
+        new SqlParameter("@endDate", SqlDbType.DateTime) { Value = endDate.HasValue ? endDate.Value : (object)DBNull.Value },
+
+        new SqlParameter("@examstatus", SqlDbType.NVarChar) { Value = (statusList != null && statusList.Count > 0)
+            ? string.Join(",", statusList) : (object)DBNull.Value },
+
+        new SqlParameter("@examsType", SqlDbType.NVarChar) { Value = (typeList != null && typeList.Count > 0)
+            ? string.Join(",", typeList) : (object)DBNull.Value },
+
+        new SqlParameter("@coursename", SqlDbType.NVarChar) { Value = (courses != null && courses.Count > 0)
+            ? string.Join(",", courses) : (object)DBNull.Value }
+    };
+
+            return _dl.ExecuteStoredProcedure("FilterExams", parameters);
         }
+
     }
 }
