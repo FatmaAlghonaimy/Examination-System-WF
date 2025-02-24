@@ -50,38 +50,36 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(22, 243);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.MaximumSize = new Size(1416, 292);
-            dataGridView1.MinimumSize = new Size(1416, 292);
+            dataGridView1.Location = new Point(25, 324);
+            dataGridView1.MaximumSize = new Size(1618, 389);
+            dataGridView1.MinimumSize = new Size(1618, 389);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1416, 292);
+            dataGridView1.Size = new Size(1618, 389);
             dataGridView1.TabIndex = 13;
             // 
             // button6
             // 
-            button6.Location = new Point(675, 541);
+            button6.Location = new Point(771, 721);
+            button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
-            button6.Size = new Size(116, 32);
+            button6.Size = new Size(133, 43);
             button6.TabIndex = 12;
             button6.Text = "back";
             button6.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(152, 131);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker1.Location = new Point(174, 175);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(219, 23);
+            dateTimePicker1.Size = new Size(250, 27);
             dateTimePicker1.TabIndex = 14;
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(152, 172);
-            dateTimePicker2.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker2.Location = new Point(174, 229);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(219, 23);
+            dateTimePicker2.Size = new Size(250, 27);
             dateTimePicker2.TabIndex = 15;
             dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
             // 
@@ -89,9 +87,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
-            label1.Location = new Point(34, 128);
+            label1.Location = new Point(39, 171);
             label1.Name = "label1";
-            label1.Size = new Size(107, 25);
+            label1.Size = new Size(129, 31);
             label1.TabIndex = 16;
             label1.Text = "start date :";
             // 
@@ -99,9 +97,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
-            label2.Location = new Point(43, 166);
+            label2.Location = new Point(49, 221);
             label2.Name = "label2";
-            label2.Size = new Size(100, 25);
+            label2.Size = new Size(119, 31);
             label2.TabIndex = 17;
             label2.Text = "end date :";
             // 
@@ -109,9 +107,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(1093, 84);
+            label5.Location = new Point(1249, 112);
             label5.Name = "label5";
-            label5.Size = new Size(234, 25);
+            label5.Size = new Size(284, 31);
             label5.TabIndex = 22;
             label5.Text = "coures which have exams";
             // 
@@ -119,9 +117,9 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(816, 84);
+            label6.Location = new Point(933, 112);
             label6.Name = "label6";
-            label6.Size = new Size(144, 25);
+            label6.Size = new Size(173, 31);
             label6.TabIndex = 23;
             label6.Text = "Type of Exams ";
             // 
@@ -129,9 +127,9 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(514, 84);
+            label7.Location = new Point(587, 112);
             label7.Name = "label7";
-            label7.Size = new Size(159, 25);
+            label7.Size = new Size(192, 31);
             label7.TabIndex = 24;
             label7.Text = "Status Of Exams ";
             // 
@@ -139,10 +137,9 @@
             // 
             checkedListBox1.FormattingEnabled = true;
             checkedListBox1.Items.AddRange(new object[] { "Pending", "Started", "Finished" });
-            checkedListBox1.Location = new Point(545, 131);
-            checkedListBox1.Margin = new Padding(3, 2, 3, 2);
+            checkedListBox1.Location = new Point(623, 175);
             checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(79, 40);
+            checkedListBox1.Size = new Size(90, 48);
             checkedListBox1.TabIndex = 25;
             checkedListBox1.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
             // 
@@ -150,20 +147,18 @@
             // 
             checkedListBox2.FormattingEnabled = true;
             checkedListBox2.Items.AddRange(new object[] { "Practice", "Final" });
-            checkedListBox2.Location = new Point(849, 131);
-            checkedListBox2.Margin = new Padding(3, 2, 3, 2);
+            checkedListBox2.Location = new Point(970, 175);
             checkedListBox2.Name = "checkedListBox2";
-            checkedListBox2.Size = new Size(84, 22);
+            checkedListBox2.Size = new Size(95, 26);
             checkedListBox2.TabIndex = 26;
             checkedListBox2.SelectedIndexChanged += checkedListBox2_SelectedIndexChanged;
             // 
             // checkedListBox3
             // 
             checkedListBox3.FormattingEnabled = true;
-            checkedListBox3.Location = new Point(1135, 131);
-            checkedListBox3.Margin = new Padding(3, 2, 3, 2);
+            checkedListBox3.Location = new Point(1297, 175);
             checkedListBox3.Name = "checkedListBox3";
-            checkedListBox3.Size = new Size(158, 76);
+            checkedListBox3.Size = new Size(180, 92);
             checkedListBox3.TabIndex = 27;
             checkedListBox3.SelectedIndexChanged += checkedListBox3_SelectedIndexChanged;
             // 
@@ -171,9 +166,9 @@
             // 
             Title.AutoSize = true;
             Title.Font = new Font("Goudy Stout", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Title.Location = new Point(382, 20);
+            Title.Location = new Point(437, 27);
             Title.Name = "Title";
-            Title.Size = new Size(605, 30);
+            Title.Size = new Size(766, 39);
             Title.TabIndex = 28;
             Title.Text = "Hello Teacher Number ...";
             // 
@@ -181,27 +176,28 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(140, 84);
+            label3.Location = new Point(160, 112);
             label3.Name = "label3";
-            label3.Size = new Size(145, 25);
+            label3.Size = new Size(176, 31);
             label3.TabIndex = 29;
             label3.Text = "Date Of Exams ";
             // 
             // btn_back
             // 
-            btn_back.Location = new Point(47, 33);
+            btn_back.Location = new Point(54, 44);
+            btn_back.Margin = new Padding(3, 4, 3, 4);
             btn_back.Name = "btn_back";
-            btn_back.Size = new Size(75, 23);
+            btn_back.Size = new Size(86, 31);
             btn_back.TabIndex = 30;
             btn_back.Text = "back";
             btn_back.UseVisualStyleBackColor = true;
-            btn_back.Click += btn_back_Click;
+            //btn_back.Click += btn_back_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1124, 526);
+            ClientSize = new Size(1463, 701);
             Controls.Add(btn_back);
             Controls.Add(label3);
             Controls.Add(Title);
@@ -217,7 +213,6 @@
             Controls.Add(dateTimePicker1);
             Controls.Add(dataGridView1);
             Controls.Add(button6);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
