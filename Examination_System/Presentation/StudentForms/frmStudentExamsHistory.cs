@@ -23,5 +23,10 @@ namespace Examination_System.Presentation
             frmStudentProfile frmStudentProfile = new frmStudentProfile();
             frmStudentProfile.Show();
         }
+
+        private void textBoxExt1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

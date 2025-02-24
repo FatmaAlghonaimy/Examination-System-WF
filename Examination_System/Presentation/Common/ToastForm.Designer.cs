@@ -102,6 +102,7 @@
             MinimumSize = new Size(300, 60);
             Name = "ToastForm";
             Text = "ToastForm";
+            TopMost = true;
             Load += ToastForm_Load;
             ((System.ComponentModel.ISupportInitialize)pic_toasticon).EndInit();
             ResumeLayout(false);

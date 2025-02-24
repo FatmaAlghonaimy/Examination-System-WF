@@ -145,6 +145,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(355, 611);
+            Controls.Add(pic_userImg);
             Controls.Add(pictureBox1);
             Controls.Add(btn_browse);
             Controls.Add(btn_save);
@@ -155,7 +156,6 @@
             Controls.Add(tx_password);
             Controls.Add(tx_email);
             Controls.Add(tx_username);
-            Controls.Add(pic_userImg);
             MaximumSize = new Size(371, 650);
             MinimumSize = new Size(371, 650);
             Name = "frmAdminEditProfile";

@@ -70,6 +70,10 @@
               "target": "Package",
               "version": "[15.0.4795.1001, )"
             },
+            "Syncfusion.Tools.Windows": {
+              "target": "Package",
+              "version": "[28.2.6, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.9.0, )"

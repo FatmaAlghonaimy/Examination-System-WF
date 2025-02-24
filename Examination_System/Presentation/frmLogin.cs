@@ -75,8 +75,8 @@ namespace Examination_System
                     if (result.Item2.UserRole == UserRole.Admin)
                     {
 
-                        frmAdminProfile frmAdminProfile = new frmAdminProfile();
-                        frmAdminProfile.Show();
+                        frmAdmin frmAdmin = new frmAdmin();
+                        frmAdmin.Show();
                     }
                     else if (result.Item2.UserRole == UserRole.Teacher)
                     {
