@@ -53,7 +53,6 @@
             dgvStudentCourses.RowHeadersWidth = 72;
             dgvStudentCourses.Size = new Size(1191, 572);
             dgvStudentCourses.TabIndex = 1;
-            dgvStudentCourses.CellContentClick += dgvStudentCourses_CellContentClick;
             // 
             // frmStudentCourses
             // 

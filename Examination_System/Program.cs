@@ -18,23 +18,9 @@ namespace Examination_System
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             General.frmLogin = new frmLogin();
-<<<<<<< HEAD
-            //General.primarycolor = getfromdatabase();
-            Application.Run(General.frmLogin);
-            //Application.Run(new frmStudentExamsHistory(13));
-            //Application.Run(new frmStudentProfile());
-            //Application.Run(new frmStudentCourses(13));
-            //Application.Run(new frmStudentExam(13));
-=======
-            //Application.Run(General.frmLogin);
-            //Application.Run(new frmAdmin());
-            Application.Run(new Form2());    
->>>>>>> d8ac61edf214f9b089a41e8c4251965a6aa19053
 
-            //Application.Run(new frmTeacherProfile());
-            //Application.Run(new FormInsertQuestionsToExam(new Exam() {ID=1002, NoOfQuestions=9,CourseID=100 }));
-            //Application.Run(new FormManageQuestions());
-            //Application.Run(new FormAddExam());
+            Application.Run(General.frmLogin);
+
         }
     }
 }

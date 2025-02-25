@@ -1,5 +1,7 @@
-﻿using Examination_System.Business.StudentCoursesService;
+﻿using Examination_System.Business.Enums;
+using Examination_System.Business.StudentCoursesService;
 using Examination_System.Business.StudentExamHistory;
+using Examination_System.Presentation.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,14 +47,8 @@ namespace Examination_System.Presentation
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                new ToastForm(ToastType.Error, ex.Message).Show();
             }
-        }
-
-        private void dgvStudentCourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //LoadStudentCourses();
         }
 
         private void frmStudentCourses_Load(object sender, EventArgs e)

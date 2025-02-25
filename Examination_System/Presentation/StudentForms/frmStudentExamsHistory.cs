@@ -1,4 +1,6 @@
-﻿using Examination_System.Business.StudentExamHistory;
+﻿using Examination_System.Business.Enums;
+using Examination_System.Business.StudentExamHistory;
+using Examination_System.Presentation.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +38,6 @@ namespace Examination_System.Presentation
             frmStudentProfile.Show();
         }
 
-<<<<<<< HEAD
 
         private void LoadStudentExamsHistory()
         {
@@ -47,19 +48,14 @@ namespace Examination_System.Presentation
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                new ToastForm(ToastType.Error,ex.Message).Show();
             }
         }
 
         private void frmStudentExamsHistory_Load_1(object sender, EventArgs e)
         {
             LoadStudentExamsHistory();
-=======
-        private void textBoxExt1_TextChanged(object sender, EventArgs e)
-        {
-
->>>>>>> d8ac61edf214f9b089a41e8c4251965a6aa19053
         }
+
     }
 }
