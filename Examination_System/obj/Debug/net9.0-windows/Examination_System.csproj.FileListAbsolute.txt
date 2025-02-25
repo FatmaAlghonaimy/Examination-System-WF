@@ -87,3 +87,15 @@ D:\.net\C#_Project\Examination-System-WF\Examination_System\obj\Debug\net9.0-win
 D:\.net\C#_Project\Examination-System-WF\Examination_System\obj\Debug\net9.0-windows\Examination_System.Presentation.AdminForms.CreateNewTheacher.resources
 D:\.net\C#_Project\Examination-System-WF\Examination_System\obj\Debug\net9.0-windows\Examination_System.Teacher_Info_Report.resources
 D:\.net\C#_Project\Examination-System-WF\Examination_System\obj\Debug\net9.0-windows\Examination_System.Properties.Resources.resources
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\Examination_System.exe
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\Examination_System.dll
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\Microsoft.Extensions.Configuration.dll
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\Microsoft.Extensions.Primitives.dll
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\Microsoft.SqlServer.Server.dll
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+D:\Iti\Windows Forms\Project\Examination\Examination_System\Examination_System\bin\Debug\net9.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll

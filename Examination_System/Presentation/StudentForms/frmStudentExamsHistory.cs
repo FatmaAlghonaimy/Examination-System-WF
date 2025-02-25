@@ -36,6 +36,7 @@ namespace Examination_System.Presentation
             frmStudentProfile.Show();
         }
 
+<<<<<<< HEAD
 
         private void LoadStudentExamsHistory()
         {
@@ -54,6 +55,11 @@ namespace Examination_System.Presentation
         private void frmStudentExamsHistory_Load_1(object sender, EventArgs e)
         {
             LoadStudentExamsHistory();
+=======
+        private void textBoxExt1_TextChanged(object sender, EventArgs e)
+        {
+
+>>>>>>> d8ac61edf214f9b089a41e8c4251965a6aa19053
         }
     }
 }

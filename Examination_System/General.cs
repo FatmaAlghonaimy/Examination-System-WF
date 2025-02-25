@@ -13,10 +13,21 @@ namespace Examination_System
         static public User LoggedUser { get; set; } = new User() { ID =11 };
         public static string connectionString { get; set; } = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
                           .AddJsonFile("appSettings.json")
+<<<<<<< HEAD
                           .Build().GetSection("amjad").Value;
+=======
+                          .Build().GetSection("sqlconnectionAwad").Value;
+>>>>>>> d8ac61edf214f9b089a41e8c4251965a6aa19053
         public static string rootPath =  Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
         public static frmLogin frmLogin { get; set; }
-        public static string primarycolor { get; set; } = "#db444";
+        public static Color primarycolor { get; set; } = Color.FromArgb(35, 40, 45);
+        public static Panel pl_mainContent = new Panel();
 
+        public static void LoadUserControl(UserControl userControl)
+        {
+            pl_mainContent.Controls.Clear(); // Clear previous control
+            userControl.Dock = DockStyle.Fill; // Fit the panel
+            pl_mainContent.Controls.Add(userControl); // Add new control
+        }
     }
 }
