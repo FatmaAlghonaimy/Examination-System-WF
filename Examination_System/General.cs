@@ -17,5 +17,13 @@ namespace Examination_System
         public static string rootPath =  Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
         public static frmLogin frmLogin { get; set; }
         public static Color primarycolor { get; set; } = Color.FromArgb(35, 40, 45);
+        public static Panel pl_mainContent = new Panel();
+
+        public static void LoadUserControl(UserControl userControl)
+        {
+            pl_mainContent.Controls.Clear(); // Clear previous control
+            userControl.Dock = DockStyle.Fill; // Fit the panel
+            pl_mainContent.Controls.Add(userControl); // Add new control
+        }
     }
 }

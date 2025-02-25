@@ -20,6 +20,7 @@ namespace Examination_System
             UserService.SetUserImage(pic_userImg, General.LoggedUser);
             lb_name.Text = General.LoggedUser.Username;
             frmAdminProfileUc.UserDataChanged += FrmAdminProfileUc_UserDataChanged;
+            General.pl_mainContent = pl_content;
         }
         private void FrmAdminProfileUc_UserDataChanged(object sender, EventArgs e)
         {
@@ -38,16 +39,11 @@ namespace Examination_System
 
         }
 
-        private void LoadUserControl(UserControl userControl)
-        {
-            pl_content.Controls.Clear(); // Clear previous control
-            userControl.Dock = DockStyle.Fill; // Fit the panel
-            pl_content.Controls.Add(userControl); // Add new control
-        }
+        
 
         private void LoadAdminProfile(object sender, EventArgs e)
         {
-            LoadUserControl(new frmAdminProfileUc(General.LoggedUser));
+            General.LoadUserControl(new frmAdminProfileUc(General.LoggedUser));
         }
     }
 }
