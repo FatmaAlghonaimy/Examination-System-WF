@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Examination_System.Business.Enums;
+using Examination_System.Business.StudentCoursesService;
+using Examination_System.Business.StudentExamHistory;
+using Examination_System.Presentation.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +16,20 @@ namespace Examination_System.Presentation
 {
     public partial class frmStudentCourses : Form
     {
+        private int stdID = General.LoggedUser.ID;
+        private StudentCoursesService _courceService;
         public frmStudentCourses()
         {
             InitializeComponent();
+            _courceService = new StudentCoursesService();
         }
+        public frmStudentCourses(int stdID)
+        {
+            InitializeComponent();
+            this.stdID = stdID;
+            _courceService = new StudentCoursesService();
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -23,6 +37,23 @@ namespace Examination_System.Presentation
             frmStudentProfile frmStudentProfile = new frmStudentProfile();
             frmStudentProfile.Show();
 
+        }
+        private void LoadStudentCourses()
+        {
+            try
+            {
+                DataTable dt = _courceService.GetStudentCources(stdID);
+                dgvStudentCourses.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                new ToastForm(ToastType.Error, ex.Message).Show();
+            }
+        }
+
+        private void frmStudentCourses_Load(object sender, EventArgs e)
+        {
+            LoadStudentCourses();
         }
     }
 }

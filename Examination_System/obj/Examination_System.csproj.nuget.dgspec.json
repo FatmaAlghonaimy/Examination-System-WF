@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\iti\\new\\Examination_System\\Examination_System.csproj": {}
+    "C:\\Users\\amjad\\Desktop\\New folder\\Examination-System-WF\\Examination_System\\Examination_System.csproj": {}
   },
   "projects": {
-    "C:\\iti\\new\\Examination_System\\Examination_System.csproj": {
+    "C:\\Users\\amjad\\Desktop\\New folder\\Examination-System-WF\\Examination_System\\Examination_System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\iti\\new\\Examination_System\\Examination_System.csproj",
+        "projectUniqueName": "C:\\Users\\amjad\\Desktop\\New folder\\Examination-System-WF\\Examination_System\\Examination_System.csproj",
         "projectName": "Examination_System",
-        "projectPath": "C:\\iti\\new\\Examination_System\\Examination_System.csproj",
-        "packagesPath": "C:\\Users\\it\\.nuget\\packages\\",
-        "outputPath": "C:\\iti\\new\\Examination_System\\obj\\",
+        "projectPath": "C:\\Users\\amjad\\Desktop\\New folder\\Examination-System-WF\\Examination_System\\Examination_System.csproj",
+        "packagesPath": "C:\\Users\\amjad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amjad\\Desktop\\New folder\\Examination-System-WF\\Examination_System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\it\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amjad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,9 +51,17 @@
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
           "dependencies": {
+            "Krypton.Toolkit": {
+              "target": "Package",
+              "version": "[90.24.11.317, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             },
             "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
@@ -66,11 +75,15 @@
               "target": "Package",
               "version": "[9.0.2, )"
             },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Microsoft.Office.Interop.Excel": {
               "target": "Package",
               "version": "[15.0.4795.1001, )"
             },
-            "Syncfusion.Tools.Windows": {
+            "Syncfusion.GridHelperClasses.Windows": {
               "target": "Package",
               "version": "[28.2.6, )"
             },
