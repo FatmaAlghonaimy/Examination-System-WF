@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Examination_System.Business.StudentExamHistory;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace Examination_System.Presentation
 {
     public partial class frmStudentExamsHistory : Form
     {
+        private int stdID = General.LoggedUser.ID;
+        private StudentExamService _examService;
+
         public frmStudentExamsHistory()
         {
             InitializeComponent();
+            _examService = new StudentExamService();
+        }
+
+        public frmStudentExamsHistory(int stdID)
+        {
+            InitializeComponent();
+            this.stdID = stdID;
+            _examService = new StudentExamService();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,6 +34,26 @@ namespace Examination_System.Presentation
             this.Close();
             frmStudentProfile frmStudentProfile = new frmStudentProfile();
             frmStudentProfile.Show();
+        }
+
+
+        private void LoadStudentExamsHistory()
+        {
+            try
+            {
+                DataTable dt = _examService.GetStudentExams(stdID);
+                dgvExamsHistory.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        private void frmStudentExamsHistory_Load_1(object sender, EventArgs e)
+        {
+            LoadStudentExamsHistory();
         }
     }
 }

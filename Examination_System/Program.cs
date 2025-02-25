@@ -17,14 +17,18 @@ namespace Examination_System
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //General.frmLogin = new frmLogin();
-            //Application.Run(General.frmLogin);
-
+            General.frmLogin = new frmLogin();
+            //General.primarycolor = getfromdatabase();
+            Application.Run(General.frmLogin);
+            //Application.Run(new frmStudentExamsHistory(13));
+            //Application.Run(new frmStudentProfile());
+            //Application.Run(new frmStudentCourses(13));
+            //Application.Run(new frmStudentExam(13));
 
             //Application.Run(new frmTeacherProfile());
             //Application.Run(new FormInsertQuestionsToExam(new Exam() {ID=1002, NoOfQuestions=9,CourseID=100 }));
             //Application.Run(new FormManageQuestions());
-            Application.Run(new FormAddExam());
+            //Application.Run(new FormAddExam());
         }
     }
 }

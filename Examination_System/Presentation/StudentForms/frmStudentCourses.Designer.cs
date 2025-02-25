@@ -29,44 +29,50 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvStudentCourses = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvStudentCourses).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(12, 12);
+            button1.Location = new Point(21, 24);
+            button1.Margin = new Padding(5, 6, 5, 6);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(129, 46);
             button1.TabIndex = 0;
             button1.Text = "back";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // dataGridView1
+            // dgvStudentCourses
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(93, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(695, 286);
-            dataGridView1.TabIndex = 1;
+            dgvStudentCourses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvStudentCourses.Location = new Point(159, 24);
+            dgvStudentCourses.Margin = new Padding(5, 6, 5, 6);
+            dgvStudentCourses.Name = "dgvStudentCourses";
+            dgvStudentCourses.RowHeadersWidth = 72;
+            dgvStudentCourses.Size = new Size(1191, 572);
+            dgvStudentCourses.TabIndex = 1;
+            dgvStudentCourses.CellContentClick += dgvStudentCourses_CellContentClick;
             // 
             // frmStudentCourses
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(1371, 900);
+            Controls.Add(dgvStudentCourses);
             Controls.Add(button1);
+            Margin = new Padding(5, 6, 5, 6);
             Name = "frmStudentCourses";
             Text = "frmStudentCourses";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += frmStudentCourses_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvStudentCourses).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvStudentCourses;
     }
 }

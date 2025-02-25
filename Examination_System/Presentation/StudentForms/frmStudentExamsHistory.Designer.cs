@@ -29,44 +29,49 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvExamsHistory = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvExamsHistory).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(32, 20);
+            button1.Location = new Point(55, 40);
+            button1.Margin = new Padding(5, 6, 5, 6);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(129, 46);
             button1.TabIndex = 0;
             button1.Text = "back";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // dataGridView1
+            // dgvExamsHistory
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(176, 20);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(612, 277);
-            dataGridView1.TabIndex = 1;
+            dgvExamsHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvExamsHistory.Location = new Point(302, 40);
+            dgvExamsHistory.Margin = new Padding(5, 6, 5, 6);
+            dgvExamsHistory.Name = "dgvExamsHistory";
+            dgvExamsHistory.RowHeadersWidth = 72;
+            dgvExamsHistory.Size = new Size(1049, 554);
+            dgvExamsHistory.TabIndex = 1;
             // 
             // frmStudentExamsHistory
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(1371, 900);
+            Controls.Add(dgvExamsHistory);
             Controls.Add(button1);
+            Margin = new Padding(5, 6, 5, 6);
             Name = "frmStudentExamsHistory";
             Text = "frmStudentExamsHistory";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += frmStudentExamsHistory_Load_1;
+            ((System.ComponentModel.ISupportInitialize)dgvExamsHistory).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvExamsHistory;
     }
 }
