@@ -1,3 +1,4 @@
+using Examination_System.CustomControls;
 using Examination_System.Presentation;
 using Examination_System.Presentation.TeacherForms;
 using ExaminationSystem;
@@ -18,8 +19,8 @@ namespace Examination_System
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             General.frmLogin = new frmLogin();
-            Application.Run(General.frmLogin);
-            //Application.Run(new frmAdmin());
+            //Application.Run(new CustomTable());
+            Application.Run(new frmAdmin());
 
 
             //Application.Run(new frmTeacherProfile());

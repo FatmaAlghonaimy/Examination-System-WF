@@ -211,7 +211,49 @@ namespace Examination_System.Business
             }
             
         }
+        public static DataTable getAllCoursesForTeacher(int teacherId)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(@$"
+                    select Id, CourseName from Courses 
+	                    where TeacherID = {teacherId}
+	                    and TeacherID is null
+                    "))
+                {
 
+
+                    return UserRepository.UserDAL(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public static DataTable GetTeacherCourses(int teacherId)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(@$"
+                    select Id, CourseName from Courses 
+	                    where TeacherID = {teacherId}
+	                    
+                    "))
+                {
+
+
+                    return UserRepository.UserDAL(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
         public static int CreateUpdateUser(User user, List<int> coursesIds, OperationMode operationMode)
         {
             try

@@ -236,11 +236,12 @@ namespace Examination_System.Presentation.AdminForms
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            this.Close();
-            if(returnForm == ReturnForm.frmAdminManageStudents)
-            {
-                new frmAdminManageStudents().Show();
-            }
+            //this.Close();
+            //if(returnForm == ReturnForm.frmAdminManageStudents)
+            //{
+            //    new frmAdminManageStudents().Show();
+            //}
+            General.LoadUserControl(new frmAdminManageStudentUc());
         }
     }
 }
