@@ -37,7 +37,7 @@ namespace ExaminationSystem.Presentation
             
             QuestionTypes.Items.Clear(); 
 
-            foreach (QuestionType type in Enum.GetValues(typeof(QuestionType)))
+            foreach (QuestionType type in Enum.GetValues<QuestionType>())
             {
                 QuestionTypes.Items.Add(type, false); 
             }

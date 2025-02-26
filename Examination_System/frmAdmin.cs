@@ -59,6 +59,7 @@ namespace Examination_System
         private void button7_Click(object sender, EventArgs e)
         {
             General.LoadUserControl(new frmAdminReportsUc());
+
         }
     }
 }

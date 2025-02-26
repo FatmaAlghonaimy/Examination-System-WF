@@ -1,5 +1,6 @@
 ﻿using Examination_System;
 using Examination_System.Presentation;
+using ExaminationSystem.Business.StudentService;
 using Microsoft.Data.SqlClient;
 
 using System.Data;
@@ -9,23 +10,21 @@ namespace ExaminationSystem
 {
     public partial class Form2 : Form
     {
-        int login_id = General.LoggedUser.ID;
+        //int login_id = General.LoggedUser.ID;
+        int login_id = 11;
+        private StudentService _studentService;
         public Form2()
         {
             InitializeComponent();
-            string connectionString = General.connectionString;
-
-            using (SqlConnection con = new SqlConnection(connectionString))
+            _studentService = new StudentService();
+            LoadCourses();
+        }
+        private void LoadCourses()
+        {
+            List<string> courses = _studentService.GetTeacherCourses(login_id);
+            foreach (var course in courses)
             {
-                con.Open();
-                using (SqlCommand cmd = new SqlCommand($"SELECT CourseName FROM Courses WHERE TeacherID = {login_id}", con))
-                {
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        checkedListBox1.Items.Add(reader["CourseName"].ToString());
-                    }
-                }
+                checkedListBox1.Items.Add(course);
             }
         }
 
@@ -33,21 +32,8 @@ namespace ExaminationSystem
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            string connectionString = General.connectionString;
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("StudentsOfTeacher", con))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@teacherid", SqlDbType.Int).Value = login_id;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
-                    dataGridView1.DataSource = table;
-                    label1.Text = $"Hello Teacher Number {login_id}";
-
-                }
-            }
+            //dataGridView1.DataSource = _studentService.GetAllStudents(login_id);
+            label1.Text = $"Hello Teacher Number {login_id}";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,15 +41,12 @@ namespace ExaminationSystem
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 int studentID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
-
                 Form3 resultForm = new Form3(studentID);
                 resultForm.Show();
-
             }
             else
             {
-                MessageBox.Show("please choose one Student ", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                MessageBox.Show("Please choose one Student", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -72,125 +55,26 @@ namespace ExaminationSystem
         {
 
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void ApplyFilters()
         {
-            string connectionString = General.connectionString;
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("GetStudentByName", con))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
+            string name = textBox1.Text.Trim();
+            int? gender = null;
+            if (rdbtnMale.Checked)
+                gender = 0;
+            else if (rdbtnFemale.Checked)
+                gender = 1;
 
-                    var textboxvalue = textBox1.Text.Trim();
-                    var parts = textboxvalue.Split(' ');
-                    var firstname = parts[0];
-                    var lastname = parts.Length > 1 ? parts[1] : (object)DBNull.Value;
-                    cmd.Parameters.Add("@firstname", SqlDbType.VarChar).Value = firstname;
-                    cmd.Parameters.Add("@lastname", SqlDbType.VarChar).Value = lastname;
+            List<string> selectedCourses = checkedListBox1.CheckedItems.Cast<string>().ToList();
 
-                    cmd.Parameters.Add("@teacherid", SqlDbType.Int).Value = login_id;
-
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
-
-                    dataGridView1.DataSource = table;
-                }
-            }
-
+            dataGridView1.DataSource = _studentService.FilterStudents(login_id, name, gender, selectedCourses);
         }
 
-
-        private void rdbtnMale_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string connectionString = General.connectionString;
-
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("selectgender", con))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@gender", SqlDbType.TinyInt).Value = 0;
-                    cmd.Parameters.Add("@teacherid", SqlDbType.Int).Value = login_id;
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
-
-                    dataGridView1.DataSource = table;
-                }
-            }
-        }
-
-        private void rdbtnFemale_CheckedChanged(object sender, EventArgs e)
-        {
-            string connectionString = General.connectionString;
-
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("selectgender", con))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@gender", SqlDbType.TinyInt).Value = 1;
-                    cmd.Parameters.Add("@teacherid", SqlDbType.Int).Value = login_id;
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
-
-                    dataGridView1.DataSource = table;
-                }
-            }
-        }
-
-        private void rdbtnAll_CheckedChanged(object sender, EventArgs e)
-        {
-            string connectionString = General.connectionString;
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("StudentsOfTeacher", con))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@teacherid", SqlDbType.Int).Value = login_id;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
-                    dataGridView1.DataSource = table;
-                    label1.Text = $"Hello Teacher Number {login_id}";
-
-                }
-            }
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string connectionString = General.connectionString;
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("showStudentOfMultipleTheCourse", con))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    if (checkedListBox1.CheckedItems.Count > 0)
-                    {
-                        var selectedCourses = string.Join(",", checkedListBox1.CheckedItems.Cast<string>());
-
-                        cmd.Parameters.Add("@coursenames", SqlDbType.VarChar).Value = selectedCourses;
-                        cmd.Parameters.Add("@teacherid", SqlDbType.Int).Value = login_id;
-
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-
-                        dataGridView1.DataSource = table;
-                    }
-
-                }
-            }
-        }
+        // Event handlers call ApplyFilters()
+        private void textBox1_TextChanged(object sender, EventArgs e) => ApplyFilters();
+        private void rdbtnMale_CheckedChanged(object sender, EventArgs e) => ApplyFilters();
+        private void rdbtnFemale_CheckedChanged(object sender, EventArgs e) => ApplyFilters();
+        private void rdbtnAll_CheckedChanged(object sender, EventArgs e) => ApplyFilters();
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e) => ApplyFilters();
 
         private void btn_back_Click(object sender, EventArgs e)
         {

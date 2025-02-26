@@ -33,7 +33,7 @@ namespace Examination_System.Presentation.AdminForms
             lb_examtitle.Text = $"Student: {student.Fullname}";
 
             // Fetch and store the total marks for the exam
-            if (exam.Rows.Count > 0)
+            if (exam.Rows.Count > 0)                                             
             {
                 totalMarks = Convert.ToInt32(exam.Rows[0]["TotalMarks"]);
             }

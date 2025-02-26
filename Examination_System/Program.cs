@@ -19,14 +19,8 @@ namespace Examination_System
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             General.frmLogin = new frmLogin();
-            //Application.Run(new CustomTable());
-            Application.Run(new frmAdmin());
 
 
-            //Application.Run(new frmTeacherProfile());
-            //Application.Run(new FormInsertQuestionsToExam(new Exam() {ID=1002, NoOfQuestions=9,CourseID=100 }));
-            //Application.Run(new FormManageQuestions());
-            //Application.Run(new FormAddExam());
         }
     }
 }

@@ -38,9 +38,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(39, 50);
+            button1.Location = new Point(67, 100);
+            button1.Margin = new Padding(5, 6, 5, 6);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(129, 46);
             button1.TabIndex = 0;
             button1.Text = "report 1";
             button1.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(152, 50);
+            button2.Location = new Point(261, 100);
+            button2.Margin = new Padding(5, 6, 5, 6);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(129, 46);
             button2.TabIndex = 1;
             button2.Text = "report 2";
             button2.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // 
             // button3
             // 
-            button3.Location = new Point(270, 50);
+            button3.Location = new Point(463, 100);
+            button3.Margin = new Padding(5, 6, 5, 6);
             button3.Name = "button3";
-            button3.Size = new Size(75, 23);
+            button3.Size = new Size(129, 46);
             button3.TabIndex = 2;
             button3.Text = "report 3";
             button3.UseVisualStyleBackColor = true;
@@ -68,9 +71,10 @@
             // 
             // button4
             // 
-            button4.Location = new Point(393, 50);
+            button4.Location = new Point(674, 100);
+            button4.Margin = new Padding(5, 6, 5, 6);
             button4.Name = "button4";
-            button4.Size = new Size(75, 23);
+            button4.Size = new Size(129, 46);
             button4.TabIndex = 3;
             button4.Text = "report 4";
             button4.UseVisualStyleBackColor = true;
@@ -78,9 +82,10 @@
             // 
             // button5
             // 
-            button5.Location = new Point(39, 113);
+            button5.Location = new Point(67, 226);
+            button5.Margin = new Padding(5, 6, 5, 6);
             button5.Name = "button5";
-            button5.Size = new Size(75, 23);
+            button5.Size = new Size(129, 46);
             button5.TabIndex = 4;
             button5.Text = "report 5";
             button5.UseVisualStyleBackColor = true;
@@ -88,9 +93,10 @@
             // 
             // button6
             // 
-            button6.Location = new Point(152, 113);
+            button6.Location = new Point(261, 226);
+            button6.Margin = new Padding(5, 6, 5, 6);
             button6.Name = "button6";
-            button6.Size = new Size(75, 23);
+            button6.Size = new Size(129, 46);
             button6.TabIndex = 5;
             button6.Text = "back";
             button6.UseVisualStyleBackColor = true;
@@ -98,15 +104,16 @@
             // 
             // frmTeacherReports
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1371, 900);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            Margin = new Padding(5, 6, 5, 6);
             Name = "frmTeacherReports";
             Text = "frmTeacherReports";
             ResumeLayout(false);

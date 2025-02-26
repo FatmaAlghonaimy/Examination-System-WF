@@ -1,6 +1,8 @@
 ﻿using Examination_System;
 using Examination_System.Business;
 using Examination_System.Business.Enums;
+using Examination_System.Presentation;
+using Examination_System.Presentation.TeacherForms;
 using ExaminationSystem.Business.Enums;
 using ExaminationSystem.Business.QuestionAnswerService;
 using ExaminationSystem.Data_Access.Models;
@@ -24,7 +26,7 @@ namespace ExaminationSystem
         }
         private void LoadCourses()
         {
-            cmbCourseName.DataSource = CourseService.GetAllCoursesListWithTeacherID(General.LoggedUser.ID); 
+            cmbCourseName.DataSource = CourseService.GetAllCoursesListWithTeacherID(General.LoggedUser.ID);
             cmbCourseName.DisplayMember = "Name";
             cmbCourseName.ValueMember = "ID";
             cmbCourseName.SelectedIndex = -1;
@@ -81,7 +83,7 @@ namespace ExaminationSystem
             QuestionType selectedType = (QuestionType)cmbQuestionTypes.SelectedItem;
 
             if (MCQAnswerPanel == null)
-                return; 
+                return;
 
             FlowLayoutPanel answerRow = new FlowLayoutPanel()
             {
@@ -279,6 +281,12 @@ namespace ExaminationSystem
                 Marks = (int)MarksUpDown.Value,
                 CourseID = selectedCourse.ID
             };
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new FormManageQuestions().Show();
         }
     }
 }
