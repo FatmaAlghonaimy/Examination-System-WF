@@ -38,6 +38,7 @@
             MarksUpDown = new NumericUpDown();
             label4 = new Label();
             cmbCourseName = new ComboBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)MarksUpDown).BeginInit();
             SuspendLayout();
             // 
@@ -128,11 +129,22 @@
             cmbCourseName.Size = new Size(151, 28);
             cmbCourseName.TabIndex = 16;
             // 
+            // button2
+            // 
+            button2.Location = new Point(71, 269);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 18;
+            button2.Text = "back";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // FormAddQuestionWithAnswers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(980, 579);
+            Controls.Add(button2);
             Controls.Add(label4);
             Controls.Add(cmbCourseName);
             Controls.Add(MarksUpDown);
@@ -162,5 +174,6 @@
         private NumericUpDown MarksUpDown;
         private Label label4;
         private ComboBox cmbCourseName;
+        private Button button2;
     }
 }

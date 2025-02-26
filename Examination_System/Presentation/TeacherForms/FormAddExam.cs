@@ -132,7 +132,7 @@ namespace ExaminationSystem.Presentation
                 MessageBox.Show("Exam Created Successfully! Now, Add Questions.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (sender == btnGenerateExam)
                 {
-                    FormGenerateRandomExam formSpecifyQuestions = new FormGenerateRandomExam(newExam);
+                    FormGenerateRandomExam formSpecifyQuestions = new(newExam);
                     formSpecifyQuestions.ShowDialog();
                 }
                 else if (sender == btnProceedToQuestions)

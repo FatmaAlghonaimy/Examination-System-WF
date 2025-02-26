@@ -43,7 +43,7 @@
             // lbl_SearchByType
             // 
             lbl_SearchByType.AutoSize = true;
-            lbl_SearchByType.Location = new Point(515, 39);
+            lbl_SearchByType.Location = new Point(674, 39);
             lbl_SearchByType.Margin = new Padding(2, 0, 2, 0);
             lbl_SearchByType.Name = "lbl_SearchByType";
             lbl_SearchByType.Size = new Size(108, 20);
@@ -53,19 +53,18 @@
             // MultiChoiceType
             // 
             MultiChoiceType.AutoSize = true;
-            MultiChoiceType.Location = new Point(515, 110);
+            MultiChoiceType.Location = new Point(674, 110);
             MultiChoiceType.Margin = new Padding(2);
             MultiChoiceType.Name = "MultiChoiceType";
             MultiChoiceType.Size = new Size(135, 24);
             MultiChoiceType.TabIndex = 20;
             MultiChoiceType.Text = "Multiple Choice";
             MultiChoiceType.UseVisualStyleBackColor = true;
-            MultiChoiceType.CheckedChanged += chb_Parctical_CheckedChanged;
             // 
             // TrueFalseQuestion
             // 
             TrueFalseQuestion.AutoSize = true;
-            TrueFalseQuestion.Location = new Point(515, 71);
+            TrueFalseQuestion.Location = new Point(674, 71);
             TrueFalseQuestion.Margin = new Padding(2);
             TrueFalseQuestion.Name = "TrueFalseQuestion";
             TrueFalseQuestion.Size = new Size(95, 24);
@@ -79,8 +78,9 @@
             dgvQuestions.Location = new Point(92, 241);
             dgvQuestions.Margin = new Padding(3, 4, 3, 4);
             dgvQuestions.Name = "dgvQuestions";
+            dgvQuestions.ReadOnly = true;
             dgvQuestions.RowHeadersWidth = 62;
-            dgvQuestions.Size = new Size(985, 374);
+            dgvQuestions.Size = new Size(1232, 450);
             dgvQuestions.TabIndex = 17;
             // 
             // button2
@@ -125,7 +125,7 @@
             // OneChoiceType
             // 
             OneChoiceType.AutoSize = true;
-            OneChoiceType.Location = new Point(515, 149);
+            OneChoiceType.Location = new Point(674, 149);
             OneChoiceType.Margin = new Padding(2);
             OneChoiceType.Name = "OneChoiceType";
             OneChoiceType.Size = new Size(103, 24);
@@ -137,7 +137,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1148, 681);
+            ClientSize = new Size(1336, 792);
             Controls.Add(OneChoiceType);
             Controls.Add(label4);
             Controls.Add(cmbCourseName);
