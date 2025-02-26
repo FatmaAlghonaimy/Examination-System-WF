@@ -59,10 +59,10 @@ namespace Examination_System
                         new ToastForm(ToastType.Error, "Invalid username or email.").Show();
                         break;
                     case 2:
-                        new ToastForm(ToastType.Success, "Incorrect password.").Show();
+                        new ToastForm(ToastType.Error, "Incorrect password.").Show();
                         break; 
                     default:
-                        new ToastForm(ToastType.Success, "Unknown error.").Show();
+                        new ToastForm(ToastType.Error, "Unknown error.").Show();
                         break;
                 }
                 
@@ -75,8 +75,8 @@ namespace Examination_System
                     if (result.Item2.UserRole == UserRole.Admin)
                     {
 
-                        frmAdminProfile frmAdminProfile = new frmAdminProfile();
-                        frmAdminProfile.Show();
+                        frmAdmin frmAdmin = new frmAdmin();
+                        frmAdmin.Show();
                     }
                     else if (result.Item2.UserRole == UserRole.Teacher)
                     {

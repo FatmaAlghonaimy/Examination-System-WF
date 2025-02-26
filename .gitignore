@@ -1,3 +1,4 @@
 .vs/
 .cr/
-
+obj/
+bin/
