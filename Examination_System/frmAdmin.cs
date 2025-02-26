@@ -39,11 +39,27 @@ namespace Examination_System
 
         }
 
-        
+
 
         private void LoadAdminProfile(object sender, EventArgs e)
         {
             General.LoadUserControl(new frmAdminProfileUc(General.LoggedUser));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            General.LoadUserControl(new frmAdminManageStudentUc());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //General.LoadUserControl(new frmAdminManageTeachersUc());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            General.LoadUserControl(new frmAdminReportsUc());
+
         }
     }
 }

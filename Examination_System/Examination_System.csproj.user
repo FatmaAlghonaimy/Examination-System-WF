@@ -4,6 +4,15 @@
     <Compile Update="CombinedDateTimePicker.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="CustomControls\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\CustomTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -16,6 +25,9 @@
     <Compile Update="Presentation\AdminForms\frmAdminCreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Presentation\AdminForms\frmAdminCreateUserUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Presentation\AdminForms\frmAdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -27,6 +39,9 @@
     </Compile>
     <Compile Update="Presentation\AdminForms\frmAdminManageStudents.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\AdminForms\frmAdminManageStudentUc.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Presentation\AdminForms\frmAdminManageTeachers.cs">
       <SubType>Form</SubType>
@@ -43,6 +58,9 @@
     <Compile Update="Presentation\AdminForms\frmAdminReports.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Presentation\AdminForms\frmAdminReportsUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Presentation\AdminForms\frmAdminStudentCoursesReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -51,6 +69,9 @@
     </Compile>
     <Compile Update="Presentation\AdminForms\frmAdminStudentsReport.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\AdminForms\frmAdminStudentsReportUc.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Presentation\AdminForms\frmShowStudentExam.cs">
       <SubType>Form</SubType>

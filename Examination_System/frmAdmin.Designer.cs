@@ -150,6 +150,7 @@
             button7.Text = "            Reports";
             button7.TextAlign = ContentAlignment.MiddleLeft;
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // panel7
             // 
@@ -222,6 +223,7 @@
             button4.Text = "             Teachers";
             button4.TextAlign = ContentAlignment.MiddleLeft;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // panel4
             // 
@@ -246,6 +248,7 @@
             button3.Text = "             Students";
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // panel2
             // 
