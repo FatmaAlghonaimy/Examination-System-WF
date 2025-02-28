@@ -314,7 +314,7 @@ namespace Examination_System.Presentation.TeacherForms
             {
                 selectedTypes.Remove(QuestionType.SingleChoice);
             }
-            return selectedTypes; 
+            return selectedTypes;
         }
         private void LoadCourses()
         {
@@ -355,5 +355,10 @@ namespace Examination_System.Presentation.TeacherForms
             isLoading = false;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new frmTeacherProfile().Show();
+        }
     }
 }

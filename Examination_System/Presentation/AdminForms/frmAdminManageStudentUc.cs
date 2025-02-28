@@ -54,7 +54,7 @@ namespace Examination_System.Presentation.AdminForms
 
         private void CreateColumns()
         {
-            
+
             if (!dgv_students.Columns.Contains("col_edit"))
             {
                 EditDeleteButtonColumn();
@@ -65,7 +65,7 @@ namespace Examination_System.Presentation.AdminForms
             }
         }
 
-     
+
         private void FilterStudents(object sender, EventArgs e)
         {
             if (com_teachers.SelectedItem is DataRowView teacherselectedRow && com_courses.SelectedItem is DataRowView courseselectedRow)
@@ -99,7 +99,7 @@ namespace Examination_System.Presentation.AdminForms
             dgv_students.Columns.Add(btnColumn); // Add to DataGridView
         }
 
-       
+
         private void com_teachers_course_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterStudentAndLoadDgv();
@@ -159,10 +159,10 @@ namespace Examination_System.Presentation.AdminForms
                     User student = UserService.GetUsrById(studentId);
                     if (student.ID != 0)
                     {
-                       General.LoadUserControl(new frmAdminCreateUserUc(student, ReturnForm.frmAdminManageStudents, OperationMode.Edit));
+                        General.LoadUserControl(new frmAdminCreateUserUc(student, OperationMode.Edit));
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -174,8 +174,13 @@ namespace Examination_System.Presentation.AdminForms
         private void btn_newstudent_Click(object sender, EventArgs e)
         {
             //new frmAdminCreateUser(ReturnForm.frmAdminManageStudents, UserRole.Student, OperationMode.Create).Show();
-            General.LoadUserControl(new frmAdminCreateUserUc(ReturnForm.frmAdminManageStudents, UserRole.Student, OperationMode.Create));
+            General.LoadUserControl(new frmAdminCreateUserUc( UserRole.Student, OperationMode.Create));
         }
 
+        private void btn_new_teacher_Click(object sender, EventArgs e)
+        {
+            General.LoadUserControl(new frmAdminCreateUserUc( UserRole.Teacher, OperationMode.Create));
+
+        }
     }
 }

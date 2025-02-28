@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             label1 = new Label();
             com_courses = new ComboBox();
             label2 = new Label();
@@ -46,7 +46,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(92, 21);
+            label1.Location = new Point(22, 25);
             label1.Name = "label1";
             label1.Size = new Size(69, 21);
             label1.TabIndex = 11;
@@ -55,7 +55,7 @@
             // com_courses
             // 
             com_courses.FormattingEnabled = true;
-            com_courses.Location = new Point(361, 19);
+            com_courses.Location = new Point(291, 23);
             com_courses.Name = "com_courses";
             com_courses.Size = new Size(126, 23);
             com_courses.TabIndex = 9;
@@ -65,7 +65,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(294, 21);
+            label2.Location = new Point(224, 25);
             label2.Name = "label2";
             label2.Size = new Size(66, 21);
             label2.TabIndex = 12;
@@ -74,7 +74,7 @@
             // com_teachers
             // 
             com_teachers.FormattingEnabled = true;
-            com_teachers.Location = new Point(167, 19);
+            com_teachers.Location = new Point(97, 23);
             com_teachers.Name = "com_teachers";
             com_teachers.Size = new Size(121, 23);
             com_teachers.TabIndex = 15;
@@ -90,41 +90,41 @@
             dgv_students.BackgroundColor = Color.White;
             dgv_students.BorderStyle = BorderStyle.None;
             dgv_students.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.Black;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(235, 230, 255);
-            dataGridViewCellStyle4.Padding = new Padding(15);
-            dataGridViewCellStyle4.SelectionBackColor = Color.Black;
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(235, 230, 255);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgv_students.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.Black;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(235, 230, 255);
+            dataGridViewCellStyle1.Padding = new Padding(15);
+            dataGridViewCellStyle1.SelectionBackColor = Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(235, 230, 255);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_students.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_students.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = SystemColors.Window;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle5.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dgv_students.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgv_students.DefaultCellStyle = dataGridViewCellStyle2;
             dgv_students.Dock = DockStyle.Fill;
             dgv_students.EnableHeadersVisualStyles = false;
             dgv_students.Location = new Point(0, 0);
             dgv_students.Name = "dgv_students";
             dgv_students.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgv_students.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgv_students.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgv_students.RowHeadersVisible = false;
             dgv_students.RowHeadersWidth = 25;
             dgv_students.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_students.Size = new Size(802, 452);
+            dgv_students.Size = new Size(807, 455);
             dgv_students.TabIndex = 0;
             dgv_students.CellClick += HandleEDD_Buttons_Click;
             // 
@@ -138,15 +138,15 @@
             customPanel1.GradientBottomColor = Color.CadetBlue;
             customPanel1.GradientTopColor = Color.DodgerBlue;
             customPanel1.GrediantAngle = 90F;
-            customPanel1.Location = new Point(29, 65);
+            customPanel1.Location = new Point(28, 65);
             customPanel1.Name = "customPanel1";
             customPanel1.Padding = new Padding(0, 0, 0, 10);
-            customPanel1.Size = new Size(802, 462);
+            customPanel1.Size = new Size(807, 465);
             customPanel1.TabIndex = 16;
             // 
             // btn_newstudent
             // 
-            btn_newstudent.Location = new Point(521, 19);
+            btn_newstudent.Location = new Point(433, 22);
             btn_newstudent.Name = "btn_newstudent";
             btn_newstudent.Size = new Size(186, 23);
             btn_newstudent.TabIndex = 13;

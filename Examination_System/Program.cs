@@ -19,8 +19,7 @@ namespace Examination_System
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             General.frmLogin = new frmLogin();
-
-
+            Application.Run(General.frmLogin);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Examination_System.Business;
+using Examination_System.Presentation.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,7 +50,7 @@ namespace Examination_System.Presentation.AdminForms
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            new frmAdminReports().Show();
+            General.LoadUserControl(new frmAdminReportsUc());
         }
 
         private void filterStudentAndLoadDgv(int courseId, int teacherId)
@@ -59,8 +60,6 @@ namespace Examination_System.Presentation.AdminForms
             {
                 AddColumnBtn("View Courses");
             }
-
-
         }
 
         private void AddColumnBtn(string btnName)
@@ -88,8 +87,7 @@ namespace Examination_System.Presentation.AdminForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
+                new ToastForm(Business.Enums.ToastType.Error, ex.Message).Show();
             }
         }
 
@@ -102,13 +100,19 @@ namespace Examination_System.Presentation.AdminForms
                 {
                     // View Courses button was clicked
                     int studentId = (int)dgv_students.Rows[e.RowIndex].Cells["Id"].Value;
-                    new frmAdminStudentCoursesReport(studentId).Show();
+                    General.LoadUserControl(new frmAdminStudentCoursesUc(studentId));
                 }
             }
             catch (Exception ex)
             {
+                new ToastForm(Business.Enums.ToastType.Error, ex.Message).Show();
 
             }
+        }
+
+        private void btn_back_Click_1(object sender, EventArgs e)
+        {
+            General.LoadUserControl(new frmAdminReportsUc());
         }
     }
 }

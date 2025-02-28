@@ -138,12 +138,56 @@ namespace Examination_System.Business
 
             
         }
+        public static int DeleteTeacherById(int teacherId)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"DeleteTeacherById");
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@TeacherId", teacherId);
+                SqlParameter Status = new SqlParameter("@Status", SqlDbType.Int) { Direction = ParameterDirection.Output };
+                SqlParameter Error = new SqlParameter("@Error", SqlDbType.NVarChar, 255) { Direction = ParameterDirection.Output };
+                cmd.Parameters.AddRange(new SqlParameter[]
+                {
+                    Status, Error
+                });
+                 Reposatory.DML(cmd);
+                return (int)Status.Value;
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+        }
         public static DataTable GetAllTeachers()
         {
             return UserRepository.GetAllTeachers();
         }
+        public static HomeData GetHomeData()
+        {
+            SqlCommand cmd = new SqlCommand("GetHomeData");
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlParameter studentsNumber = new SqlParameter("@stNum", SqlDbType.Int) { Direction = ParameterDirection.Output };
+            SqlParameter teacherssNumber = new SqlParameter("@tNum", SqlDbType.Int) { Direction = ParameterDirection.Output };
+            SqlParameter coursesNumber = new SqlParameter("@cNum", SqlDbType.Int) { Direction = ParameterDirection.Output };
+            SqlParameter examsNumber = new SqlParameter("@eNum", SqlDbType.Int) { Direction = ParameterDirection.Output };
+            cmd.Parameters.AddRange(new SqlParameter[] {
+                studentsNumber,
+                teacherssNumber,
+                coursesNumber,
+                examsNumber
+            });
 
+            Reposatory.select(cmd);
+            HomeData homeData = new HomeData();
+            homeData.StudentsNumber = studentsNumber.Value != DBNull.Value ? Convert.ToInt32(studentsNumber.Value) : 0;
+            homeData.TeachersNumber = teacherssNumber.Value != DBNull.Value ? Convert.ToInt32(teacherssNumber.Value) : 0;
+            homeData.CoursesNumber = coursesNumber.Value != DBNull.Value ? Convert.ToInt32(coursesNumber.Value) : 0;
+            homeData.ExamsNumber = examsNumber.Value != DBNull.Value ? Convert.ToInt32(examsNumber.Value) : 0;
+
+            return homeData;
+        }
         public static DataTable GetAllCoursesStudentEnrolledIn(int studentId)
         {
             try
@@ -218,7 +262,7 @@ namespace Examination_System.Business
                 using (SqlCommand cmd = new SqlCommand(@$"
                     select Id, CourseName from Courses 
 	                    where TeacherID = {teacherId}
-	                    and TeacherID is null
+	                    or TeacherID is null
                     "))
                 {
 
@@ -232,7 +276,27 @@ namespace Examination_System.Business
                 throw ex;
             }
         }
+        public static List<ActivityLog> GetRecentActivities()
+        {
+            DataTable dataTable = Reposatory.select(new SqlCommand($"  select top(5) * from ActivityLog order by ActivityID desc"));
+            List<ActivityLog> logs = new List<ActivityLog>();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                ActivityLog log = new ActivityLog
+                {
+                    ActivityID = Convert.ToInt32(row["ActivityID"]),
+                    TableName = row["TableName"].ToString(),
+                    RecordID = Convert.ToInt32(row["RecordID"]),
+                    ActionType = row["ActionType"].ToString(),
+                    ActionTimestamp = row["ActionTimestamp"] != DBNull.Value ? (DateTime?)row["ActionTimestamp"] : null,
+                    Details = row["Details"] != DBNull.Value ? row["Details"].ToString() : null,
+                    UserName = row["UserName"] != DBNull.Value ? row["UserName"].ToString() : null
+                };
 
+                logs.Add(log);
+            }
+            return logs;
+        }
         public static DataTable GetTeacherCourses(int teacherId)
         {
             try
@@ -285,6 +349,11 @@ namespace Examination_System.Business
             return UserRepository.UserDAL(cmd);
         }
 
+        public static DataTable GetAllAvialableCourses()
+        {
+            SqlCommand cmd = new SqlCommand($"select ID,  CourseName from Courses where teacherid is null");
+            return UserRepository.UserDAL(cmd);
+        }
         public static DataTable GetStudentExamQuestionAnswers(int questionId)
         {
             SqlCommand cmd = new SqlCommand($"select * from Answers where QuestionID = {questionId}");

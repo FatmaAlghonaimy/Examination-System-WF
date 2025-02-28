@@ -244,6 +244,7 @@ namespace Examination_System.Presentation
                 FilterByCources(selectedCategory);
                 txb_SearchByName.Clear();
                 txb_search_Id.Clear();
+                return;
             }
             else
             {

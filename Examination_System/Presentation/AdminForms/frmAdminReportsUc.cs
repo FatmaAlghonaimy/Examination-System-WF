@@ -25,7 +25,7 @@ namespace Examination_System.Presentation.AdminForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new frmAdminStudentsReport().Show();
+            General.LoadUserControl(new frmAdminStudentsReportUc());
         }
     }
 }

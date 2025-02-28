@@ -85,9 +85,9 @@
             // 
             button1.Location = new Point(69, 50);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(107, 23);
             button1.TabIndex = 12;
-            button1.Text = "report 1";
+            button1.Text = "Students Report";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 

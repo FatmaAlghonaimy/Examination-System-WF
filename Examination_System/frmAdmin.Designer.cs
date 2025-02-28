@@ -175,6 +175,7 @@
             button6.Text = "             Courses";
             button6.TextAlign = ContentAlignment.MiddleLeft;
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // panel6
             // 
@@ -199,6 +200,7 @@
             button5.Text = "             Exams";
             button5.TextAlign = ContentAlignment.MiddleLeft;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // panel5
             // 
@@ -324,6 +326,7 @@
             MaximumSize = new Size(1100, 600);
             MinimumSize = new Size(1100, 600);
             Name = "frmAdmin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAdmin";
             Load += frmAdmin_Load;
             pl_sidebar.ResumeLayout(false);

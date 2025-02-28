@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            //ComboBox cmb_Cources;
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            ComboBox cmb_Cources;
             dgv_Teacher = new DataGridView();
             btn_back = new Button();
             btnNew = new Button();
@@ -47,17 +47,16 @@
             // dgv_Teacher
             // 
             dgv_Teacher.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dgv_Teacher.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dgv_Teacher.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             dgv_Teacher.BackgroundColor = Color.RosyBrown;
             dgv_Teacher.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Teacher.GridColor = Color.RosyBrown;
-            dgv_Teacher.Location = new Point(-1, 234);
-            dgv_Teacher.Margin = new Padding(4, 5, 4, 5);
+            dgv_Teacher.Location = new Point(-1, 140);
             dgv_Teacher.Name = "dgv_Teacher";
             dgv_Teacher.RowHeadersWidth = 62;
-            dgv_Teacher.Size = new Size(1328, 514);
+            dgv_Teacher.Size = new Size(930, 308);
             dgv_Teacher.TabIndex = 4;
             dgv_Teacher.CellContentClick += dgv_Teacher_CellContentClick;
             dgv_Teacher.CellDoubleClick += Teacher_Info_Report;
@@ -69,10 +68,9 @@
             btn_back.FlatStyle = FlatStyle.Popup;
             btn_back.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_back.ForeColor = Color.Brown;
-            btn_back.Location = new Point(0, 0);
-            btn_back.Margin = new Padding(4, 5, 4, 5);
+            btn_back.Location = new Point(115, 0);
             btn_back.Name = "btn_back";
-            btn_back.Size = new Size(663, 54);
+            btn_back.Size = new Size(349, 32);
             btn_back.TabIndex = 3;
             btn_back.Text = "back";
             btn_back.UseVisualStyleBackColor = false;
@@ -85,10 +83,9 @@
             btnNew.FlatStyle = FlatStyle.Popup;
             btnNew.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNew.ForeColor = Color.Brown;
-            btnNew.Location = new Point(660, 0);
-            btnNew.Margin = new Padding(4, 5, 4, 5);
+            btnNew.Location = new Point(470, 0);
             btnNew.Name = "btnNew";
-            btnNew.Size = new Size(667, 54);
+            btnNew.Size = new Size(283, 32);
             btnNew.TabIndex = 6;
             btnNew.Text = "Create New Teacher";
             btnNew.UseVisualStyleBackColor = false;
@@ -100,9 +97,10 @@
             btn_report.Cursor = Cursors.Hand;
             btn_report.Font = new Font("Segoe Print", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_report.ForeColor = Color.Brown;
-            btn_report.Location = new Point(878, 141);
+            btn_report.Location = new Point(545, 87);
+            btn_report.Margin = new Padding(2, 2, 2, 2);
             btn_report.Name = "btn_report";
-            btn_report.Size = new Size(450, 58);
+            btn_report.Size = new Size(208, 35);
             btn_report.TabIndex = 41;
             btn_report.Text = "Report";
             btn_report.UseVisualStyleBackColor = false;
@@ -120,18 +118,20 @@
             pnl_nav.Controls.Add(btnNew);
             pnl_nav.Controls.Add(btn_back);
             pnl_nav.ForeColor = Color.Coral;
-            pnl_nav.Location = new Point(-1, 1);
+            pnl_nav.Location = new Point(54, 11);
+            pnl_nav.Margin = new Padding(2, 2, 2, 2);
             pnl_nav.Name = "pnl_nav";
-            pnl_nav.Size = new Size(1328, 225);
+            pnl_nav.Size = new Size(770, 135);
             pnl_nav.TabIndex = 7;
             pnl_nav.Paint += pnl_nav_Paint;
             // 
             // txb_SearchByName
             // 
-            txb_SearchByName.Location = new Point(442, 145);
+            txb_SearchByName.Location = new Point(309, 87);
+            txb_SearchByName.Margin = new Padding(2, 2, 2, 2);
             txb_SearchByName.Multiline = true;
             txb_SearchByName.Name = "txb_SearchByName";
-            txb_SearchByName.Size = new Size(412, 54);
+            txb_SearchByName.Size = new Size(232, 34);
             txb_SearchByName.TabIndex = 45;
             txb_SearchByName.TextChanged += txb_SearchByName_TextChanged;
             txb_SearchByName.KeyPress += txb_SearchByName_KeyPress;
@@ -143,19 +143,21 @@
             lbl_search_name.Font = new Font("Segoe Print", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbl_search_name.ForeColor = Color.Brown;
             lbl_search_name.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            lbl_search_name.Location = new Point(3, 145);
+            lbl_search_name.Location = new Point(115, 87);
+            lbl_search_name.Margin = new Padding(2, 0, 2, 0);
             lbl_search_name.Name = "lbl_search_name";
-            lbl_search_name.Size = new Size(433, 54);
+            lbl_search_name.Size = new Size(190, 32);
             lbl_search_name.TabIndex = 44;
             lbl_search_name.Text = "Search By Name";
             lbl_search_name.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txb_search_Id
             // 
-            txb_search_Id.Location = new Point(442, 79);
+            txb_search_Id.Location = new Point(309, 47);
+            txb_search_Id.Margin = new Padding(2, 2, 2, 2);
             txb_search_Id.Multiline = true;
             txb_search_Id.Name = "txb_search_Id";
-            txb_search_Id.Size = new Size(412, 54);
+            txb_search_Id.Size = new Size(232, 34);
             txb_search_Id.TabIndex = 43;
             txb_search_Id.TextChanged += txb_search_Id_TextChanged;
             txb_search_Id.KeyPress += txb_search_Id_KeyPress;
@@ -167,9 +169,10 @@
             lbl_Search_Id.Font = new Font("Segoe Print", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbl_Search_Id.ForeColor = Color.Brown;
             lbl_Search_Id.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            lbl_Search_Id.Location = new Point(3, 79);
+            lbl_Search_Id.Location = new Point(115, 47);
+            lbl_Search_Id.Margin = new Padding(2, 0, 2, 0);
             lbl_Search_Id.Name = "lbl_Search_Id";
-            lbl_Search_Id.Size = new Size(433, 54);
+            lbl_Search_Id.Size = new Size(190, 32);
             lbl_Search_Id.TabIndex = 42;
             lbl_Search_Id.Text = "Search By ID";
             lbl_Search_Id.TextAlign = ContentAlignment.MiddleCenter;
@@ -181,26 +184,26 @@
             cmb_Cources.Font = new Font("Segoe Print", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmb_Cources.ForeColor = Color.Brown;
             cmb_Cources.FormattingEnabled = true;
-            cmb_Cources.Location = new Point(878, 77);
+            cmb_Cources.Location = new Point(545, 47);
+            cmb_Cources.Margin = new Padding(2, 2, 2, 2);
             cmb_Cources.Name = "cmb_Cources";
-            cmb_Cources.Size = new Size(450, 58);
+            cmb_Cources.Size = new Size(208, 41);
             cmb_Cources.Sorted = true;
             cmb_Cources.TabIndex = 39;
             cmb_Cources.SelectedIndexChanged += cmb_Cources_SelectedIndexChanged;
             // 
             // frmAdminManageTeachers
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.RosyBrown;
-            ClientSize = new Size(1328, 750);
+            ClientSize = new Size(899, 421);
             Controls.Add(pnl_nav);
             Controls.Add(dgv_Teacher);
-            Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
-            MaximumSize = new Size(1350, 806);
-            MinimumSize = new Size(1350, 800);
+            MaximumSize = new Size(950, 499);
+            MinimumSize = new Size(899, 422);
             Name = "frmAdminManageTeachers";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TeacherControl";
