@@ -52,7 +52,7 @@ namespace ExaminationSystem.Presentation
             flowPanelQuestions.Controls.Clear();
 
             int startIndex = _currentPage * QuestionsPerPage;
-            int endIndex = Math.Min(startIndex + QuestionsPerPage, _questions.Count);
+            int endIndex = Math.Min(startIndex + QuestionsPerPage, _questions?.Count??0);
 
             for (int i = startIndex; i < endIndex; i++)
             {
