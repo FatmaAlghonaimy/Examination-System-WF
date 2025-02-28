@@ -1,21 +1,27 @@
-﻿using Examination_System;
-using Examination_System.Business;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using Examination_System.Business.Enums;
-using Examination_System.Presentation;
-using Examination_System.Presentation.TeacherForms;
-using ExaminationSystem.Business.Enums;
+using Examination_System.Business;
 using ExaminationSystem.Business.QuestionAnswerService;
 using ExaminationSystem.Data_Access.Models;
 
-namespace ExaminationSystem
+namespace Examination_System.Presentation.TeacherForms
 {
-    public partial class FormAddQuestionWithAnswers : Form
+    public partial class FormAddQuestionWithAnswersUS : UserControl
     {
+
         private AnswerList _answers;
         private FlowLayoutPanel MCQAnswerPanel;
         private Button btnAddAnswer;
 
-        public FormAddQuestionWithAnswers()
+        public FormAddQuestionWithAnswersUS()
         {
             InitializeComponent();
             _answers = [];
@@ -285,13 +291,14 @@ namespace ExaminationSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             new FormManageQuestions().Show();
         }
 
-        private void AnswerPanel_Paint(object sender, PaintEventArgs e)
+        private void cmbCourseName_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
     }
 }
+

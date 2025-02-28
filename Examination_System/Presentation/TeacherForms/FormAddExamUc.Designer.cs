@@ -32,6 +32,7 @@
             rdoPracticeExam = new RadioButton();
             rdoFinalExam = new RadioButton();
             btnProceedToQuestions = new Button();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label5 = new Label();
             combinedDateTimePickerStart = new ExaminationSystem.CombinedDateTimePicker();
@@ -44,7 +45,6 @@
             label2 = new Label();
             label1 = new Label();
             cmbCourseName = new ComboBox();
-            button1 = new Button();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numDuration).BeginInit();
             ((System.ComponentModel.ISupportInitialize)UpDownNoOFQuestions).BeginInit();
@@ -52,10 +52,9 @@
             // 
             // btnGenerateExam
             // 
-            btnGenerateExam.Location = new Point(422, 160);
-            btnGenerateExam.Margin = new Padding(3, 2, 3, 2);
+            btnGenerateExam.Location = new Point(690, 228);
             btnGenerateExam.Name = "btnGenerateExam";
-            btnGenerateExam.Size = new Size(181, 30);
+            btnGenerateExam.Size = new Size(207, 40);
             btnGenerateExam.TabIndex = 27;
             btnGenerateExam.Text = "Generate Exam";
             btnGenerateExam.UseVisualStyleBackColor = true;
@@ -64,10 +63,9 @@
             // rdoPracticeExam
             // 
             rdoPracticeExam.AutoSize = true;
-            rdoPracticeExam.Location = new Point(46, 197);
-            rdoPracticeExam.Margin = new Padding(3, 2, 3, 2);
+            rdoPracticeExam.Location = new Point(82, 275);
             rdoPracticeExam.Name = "rdoPracticeExam";
-            rdoPracticeExam.Size = new Size(99, 19);
+            rdoPracticeExam.Size = new Size(122, 24);
             rdoPracticeExam.TabIndex = 26;
             rdoPracticeExam.TabStop = true;
             rdoPracticeExam.Text = "Practice Exam";
@@ -76,10 +74,9 @@
             // rdoFinalExam
             // 
             rdoFinalExam.AutoSize = true;
-            rdoFinalExam.Location = new Point(46, 168);
-            rdoFinalExam.Margin = new Padding(3, 2, 3, 2);
+            rdoFinalExam.Location = new Point(82, 236);
             rdoFinalExam.Name = "rdoFinalExam";
-            rdoFinalExam.Size = new Size(82, 19);
+            rdoFinalExam.Size = new Size(101, 24);
             rdoFinalExam.TabIndex = 25;
             rdoFinalExam.TabStop = true;
             rdoFinalExam.Text = "Final Exam";
@@ -87,14 +84,18 @@
             // 
             // btnProceedToQuestions
             // 
-            btnProceedToQuestions.Location = new Point(422, 108);
-            btnProceedToQuestions.Margin = new Padding(3, 2, 3, 2);
+            btnProceedToQuestions.Location = new Point(675, 177);
             btnProceedToQuestions.Name = "btnProceedToQuestions";
-            btnProceedToQuestions.Size = new Size(181, 31);
+            btnProceedToQuestions.Size = new Size(241, 37);
             btnProceedToQuestions.TabIndex = 24;
             btnProceedToQuestions.Text = "Proceed To Questions";
             btnProceedToQuestions.UseVisualStyleBackColor = true;
             btnProceedToQuestions.Click += btnHandleExamCreation;
+            // 
+            // sqlCommand1
+            // 
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
             // flowLayoutPanel1
             // 
@@ -104,10 +105,9 @@
             flowLayoutPanel1.Controls.Add(numDuration);
             flowLayoutPanel1.Controls.Add(label6);
             flowLayoutPanel1.Controls.Add(combinedDateTimePickerEnd);
-            flowLayoutPanel1.Location = new Point(46, 243);
-            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
+            flowLayoutPanel1.Location = new Point(82, 298);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(557, 258);
+            flowLayoutPanel1.Size = new Size(637, 344);
             flowLayoutPanel1.TabIndex = 23;
             // 
             // label5
@@ -115,85 +115,81 @@
             label5.AutoSize = true;
             label5.Location = new Point(3, 0);
             label5.Name = "label5";
-            label5.Size = new Size(55, 15);
+            label5.Size = new Size(72, 20);
             label5.TabIndex = 11;
             label5.Text = "StartDate";
             // 
             // combinedDateTimePickerStart
             // 
-            combinedDateTimePickerStart.Location = new Point(65, 3);
-            combinedDateTimePickerStart.Margin = new Padding(4, 3, 4, 3);
+            combinedDateTimePickerStart.Location = new Point(81, 3);
             combinedDateTimePickerStart.Name = "combinedDateTimePickerStart";
-            combinedDateTimePickerStart.Size = new Size(433, 99);
+            combinedDateTimePickerStart.Size = new Size(495, 132);
             combinedDateTimePickerStart.TabIndex = 14;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(3, 105);
+            label3.Location = new Point(3, 138);
             label3.Name = "label3";
-            label3.Size = new Size(53, 15);
+            label3.Size = new Size(67, 20);
             label3.TabIndex = 5;
             label3.Text = "Duration";
             // 
             // numDuration
             // 
-            numDuration.Location = new Point(62, 107);
-            numDuration.Margin = new Padding(3, 2, 3, 2);
+            numDuration.Location = new Point(76, 141);
             numDuration.Maximum = new decimal(new int[] { 500, 0, 0, 0 });
             numDuration.Name = "numDuration";
-            numDuration.Size = new Size(438, 23);
+            numDuration.Size = new Size(500, 27);
             numDuration.TabIndex = 4;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(3, 132);
+            label6.Location = new Point(3, 171);
             label6.Name = "label6";
-            label6.Size = new Size(54, 15);
+            label6.Size = new Size(70, 20);
             label6.TabIndex = 13;
             label6.Text = "End Date";
             // 
             // combinedDateTimePickerEnd
             // 
-            combinedDateTimePickerEnd.Location = new Point(64, 135);
-            combinedDateTimePickerEnd.Margin = new Padding(4, 3, 4, 3);
+            combinedDateTimePickerEnd.Location = new Point(79, 174);
             combinedDateTimePickerEnd.Name = "combinedDateTimePickerEnd";
-            combinedDateTimePickerEnd.Size = new Size(433, 99);
+            combinedDateTimePickerEnd.Size = new Size(495, 132);
             combinedDateTimePickerEnd.TabIndex = 16;
             // 
             // NoOfQuestionsUpDown
             // 
             NoOfQuestionsUpDown.AutoSize = true;
-            NoOfQuestionsUpDown.Location = new Point(239, 91);
+            NoOfQuestionsUpDown.Location = new Point(472, 164);
             NoOfQuestionsUpDown.Name = "NoOfQuestionsUpDown";
-            NoOfQuestionsUpDown.Size = new Size(93, 15);
+            NoOfQuestionsUpDown.Size = new Size(116, 20);
             NoOfQuestionsUpDown.TabIndex = 22;
             NoOfQuestionsUpDown.Text = "No of Questions";
             // 
             // UpDownNoOFQuestions
             // 
-            UpDownNoOFQuestions.Location = new Point(239, 108);
-            UpDownNoOFQuestions.Margin = new Padding(3, 2, 3, 2);
+            UpDownNoOFQuestions.Location = new Point(472, 187);
             UpDownNoOFQuestions.Name = "UpDownNoOFQuestions";
-            UpDownNoOFQuestions.Size = new Size(132, 23);
+            UpDownNoOFQuestions.Size = new Size(150, 27);
             UpDownNoOFQuestions.TabIndex = 21;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(50, 144);
+            label2.Location = new Point(87, 205);
             label2.Name = "label2";
-            label2.Size = new Size(63, 15);
+            label2.Size = new Size(80, 20);
             label2.TabIndex = 20;
             label2.Text = "Exam Type";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(50, 90);
+            label1.Location = new Point(87, 133);
             label1.Name = "label1";
-            label1.Size = new Size(79, 15);
+            label1.Size = new Size(98, 20);
             label1.TabIndex = 19;
             label1.Text = "Course Name";
             // 
@@ -201,27 +197,18 @@
             // 
             cmbCourseName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbCourseName.FormattingEnabled = true;
-            cmbCourseName.Location = new Point(50, 108);
-            cmbCourseName.Margin = new Padding(3, 2, 3, 2);
+            cmbCourseName.Location = new Point(87, 156);
             cmbCourseName.Name = "cmbCourseName";
-            cmbCourseName.Size = new Size(133, 23);
+            cmbCourseName.Size = new Size(151, 28);
             cmbCourseName.TabIndex = 18;
             // 
-            // button1
+            // FormAddExamUs
             // 
-            button1.Location = new Point(49, 53);
-            button1.Name = "button1";
-            button1.Size = new Size(129, 23);
-            button1.TabIndex = 28;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // FormAddExamUc
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button1);
+            AutoScroll = true;
+            AutoScrollMargin = new Size(986, 749);
+            AutoScrollMinSize = new Size(986, 749);
             Controls.Add(btnGenerateExam);
             Controls.Add(rdoPracticeExam);
             Controls.Add(rdoFinalExam);
@@ -232,11 +219,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(cmbCourseName);
-            MaximumSize = new Size(863, 562);
-            MinimumSize = new Size(863, 562);
-            Name = "FormAddExamUc";
-            Size = new Size(863, 562);
-            Load += FormAddExamUc_Load;
+            Name = "FormAddExamUs";
+            Size = new Size(881, 644);
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numDuration).EndInit();
@@ -251,9 +235,10 @@
         private RadioButton rdoPracticeExam;
         private RadioButton rdoFinalExam;
         private Button btnProceedToQuestions;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private FlowLayoutPanel flowLayoutPanel1;
-        private ExaminationSystem.CombinedDateTimePicker combinedDateTimePickerStart;
         private Label label5;
+        private ExaminationSystem.CombinedDateTimePicker combinedDateTimePickerStart;
         private Label label3;
         private NumericUpDown numDuration;
         private Label label6;
@@ -263,6 +248,5 @@
         private Label label2;
         private Label label1;
         private ComboBox cmbCourseName;
-        private Button button1;
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Examination_System.Business;
-using Examination_System.Presentation.TeacherForms;
 using ExaminationSystem;
 using ExaminationSystem.Presentation;
 using System;
@@ -64,12 +63,6 @@ namespace Examination_System.Presentation
         {
             this.Close();
             new Form2().Show();
-        }
-
-        private void btn_manage_question_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            new FormManageQuestions().Show();
         }
     }
 }

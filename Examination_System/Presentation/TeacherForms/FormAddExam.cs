@@ -132,7 +132,7 @@ namespace ExaminationSystem.Presentation
                 MessageBox.Show("Exam Created Successfully! Now, Add Questions.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (sender == btnGenerateExam)
                 {
-                    FormGenerateRandomExam formSpecifyQuestions = new FormGenerateRandomExam(newExam);
+                    FormGenerateRandomExam formSpecifyQuestions = new(newExam);
                     formSpecifyQuestions.ShowDialog();
                 }
                 else if (sender == btnProceedToQuestions)
@@ -158,14 +158,5 @@ namespace ExaminationSystem.Presentation
             UpDownNoOFQuestions.Value = 1;
         }
 
-        private void FormAddExam_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

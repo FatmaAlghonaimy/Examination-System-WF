@@ -102,6 +102,7 @@
             AnswerPanel.Name = "AnswerPanel";
             AnswerPanel.Size = new Size(360, 245);
             AnswerPanel.TabIndex = 13;
+            AnswerPanel.Paint += AnswerPanel_Paint;
             // 
             // MarksUpDown
             // 

@@ -1,24 +1,22 @@
-﻿using Examination_System.Business;
-using Examination_System.Business.Enums;
-using ExaminationSystem;
-using ExaminationSystem.Business.AnswerService;
-using ExaminationSystem.Business.QuestionService;
-using ExaminationSystem.Data_Access.Models;
-using Syncfusion.Windows.Forms.Tools.XPMenus;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
+using Examination_System.Business.Enums;
+using Examination_System.Business;
+using ExaminationSystem.Business.AnswerService;
+using ExaminationSystem.Business.QuestionService;
+using ExaminationSystem.Data_Access.Models;
+using ExaminationSystem;
 
 namespace Examination_System.Presentation.TeacherForms
 {
-    public partial class FormManageQuestions : Form
+    public partial class FormManageQuestionsUS : UserControl
     {
         private BindingSource questionsBinding = [];
         Course selectedCourse;
@@ -26,7 +24,7 @@ namespace Examination_System.Presentation.TeacherForms
         private Dictionary<int, DataGridViewRow> editedRows = new();
         private bool isLoading = true;
 
-        public FormManageQuestions()
+        public FormManageQuestionsUS()
         {
             InitializeComponent();
             LoadCourses();
@@ -314,7 +312,7 @@ namespace Examination_System.Presentation.TeacherForms
             {
                 selectedTypes.Remove(QuestionType.SingleChoice);
             }
-            return selectedTypes; 
+            return selectedTypes;
         }
         private void LoadCourses()
         {
@@ -355,5 +353,34 @@ namespace Examination_System.Presentation.TeacherForms
             isLoading = false;
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrueFalseQuestion_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MultiChoiceType_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OneChoiceType_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCourseName_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvQuestions_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

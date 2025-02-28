@@ -34,7 +34,6 @@
             btn_addquestion = new Button();
             btn_examsreport = new Button();
             btn_mngstudents = new Button();
-            btn_manage_question = new Button();
             SuspendLayout();
             // 
             // button1
@@ -97,22 +96,11 @@
             btn_mngstudents.UseVisualStyleBackColor = true;
             btn_mngstudents.Click += btn_mngstudents_Click;
             // 
-            // btn_manage_question
-            // 
-            btn_manage_question.Location = new Point(354, 116);
-            btn_manage_question.Name = "btn_manage_question";
-            btn_manage_question.Size = new Size(151, 23);
-            btn_manage_question.TabIndex = 6;
-            btn_manage_question.Text = "Manage questions";
-            btn_manage_question.UseVisualStyleBackColor = true;
-            btn_manage_question.Click += btn_manage_question_Click;
-            // 
             // frmTeacherProfile
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btn_manage_question);
             Controls.Add(btn_mngstudents);
             Controls.Add(btn_examsreport);
             Controls.Add(btn_addquestion);
@@ -132,6 +120,5 @@
         private Button btn_addquestion;
         private Button btn_examsreport;
         private Button btn_mngstudents;
-        private Button btn_manage_question;
     }
 }

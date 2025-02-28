@@ -53,6 +53,8 @@
             dgvStudentExams.RowHeadersWidth = 72;
             dgvStudentExams.Size = new Size(1330, 488);
             dgvStudentExams.TabIndex = 1;
+            dgvStudentExams.CellFormatting += dgvExamsStudent_CellFormatting;
+            dgvStudentExams.CellContentClick += dgvStudentExams_CellClick;
             // 
             // frmStudentExam
             // 
@@ -73,5 +75,6 @@
 
         private Button button1;
         private DataGridView dgvStudentExams;
+
     }
 }

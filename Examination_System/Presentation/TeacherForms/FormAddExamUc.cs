@@ -1,18 +1,17 @@
-﻿using Examination_System.Business;
-using ExaminationSystem.Business.Enums;
-using ExaminationSystem.Data_Access.Models;
-using ExaminationSystem.Data_Access;
-using ExaminationSystem.Presentation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Examination_System.Presentation.AdminForms;
+using Examination_System.Business;
+using ExaminationSystem.Business.Enums;
+using ExaminationSystem.Data_Access.Models;
+using ExaminationSystem.Data_Access;
+using ExaminationSystem.Presentation;
 
 namespace Examination_System.Presentation.TeacherForms
 {
@@ -102,8 +101,8 @@ namespace Examination_System.Presentation.TeacherForms
         }
         private void LoadCourses()
         {
-            cmbCourseName.DataSource = CourseService.GetAllCourses();
-            cmbCourseName.DisplayMember = "CourseName";
+            cmbCourseName.DataSource = CourseService.GetAllCoursesListWithTeacherID(General.LoggedUser.ID);
+            cmbCourseName.DisplayMember = "Name";
             cmbCourseName.ValueMember = "ID";
             cmbCourseName.SelectedIndex = -1;
         }
@@ -141,13 +140,11 @@ namespace Examination_System.Presentation.TeacherForms
                 MessageBox.Show("Exam Created Successfully! Now, Add Questions.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (sender == btnGenerateExam)
                 {
-                    FormGenerateRandomExam formSpecifyQuestions = new FormGenerateRandomExam(newExam);
-                    formSpecifyQuestions.ShowDialog();
+                    General.LoadUserControl(new FormGenerateRandomExamUC(newExam));
                 }
                 else if (sender == btnProceedToQuestions)
                 {
-                    FormInsertQuestionsToExam formInsertQuestionsIntoExam = new FormInsertQuestionsToExam(newExam);
-                    formInsertQuestionsIntoExam.Show();
+                    General.LoadUserControl(new FormInsertQuestionsToExamUs(newExam));
                 }
                 Hide();
             }
@@ -165,26 +162,6 @@ namespace Examination_System.Presentation.TeacherForms
             combinedDateTimePickerEnd.Value = DateTime.Now;
             numDuration.Value = 1;
             UpDownNoOFQuestions.Value = 1;
-        }
-
-        private void FormAddExam_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void FormAddExamUc_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            General.LoadUserControl(new frmAdminManageExamsUc());
         }
     }
 }

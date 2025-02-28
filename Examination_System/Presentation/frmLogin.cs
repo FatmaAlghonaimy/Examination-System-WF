@@ -80,8 +80,8 @@ namespace Examination_System
                     }
                     else if (result.Item2.UserRole == UserRole.Teacher)
                     {
-                        frmTeacherProfile frmTeacherProfile = new frmTeacherProfile();
-                        frmTeacherProfile.Show();
+                        frmTeacher frmTeacher = new frmTeacher();
+                        frmTeacher.Show();
                     }
                     else if (result.Item2.UserRole == UserRole.Student)
                     {

@@ -17,9 +17,8 @@ namespace Examination_System.Presentation.TeacherForms
             InitializeComponent();
         }
 
-        private void leftPanel1_Load(object sender, EventArgs e)
-        {
+       
 
-        }
+        
     }
 }

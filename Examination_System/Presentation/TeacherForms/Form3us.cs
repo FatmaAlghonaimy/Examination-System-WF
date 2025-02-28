@@ -1,26 +1,31 @@
-﻿using Examination_System;
-using ExaminationSystem.Business.StudentResultService;
-using Microsoft.Data.SqlClient;
-
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
+using System.Windows.Forms;
+using ExaminationSystem.Business.StudentResultService;
 
-
-namespace ExaminationSystem
+namespace Examination_System.Presentation.TeacherForms
 {
-    public partial class Form3 : Form
+    public partial class Form3us : UserControl
     {
 
         private int _studentId;
         private StudentResultService _studentResultService;
 
-        public Form3(int studentId)
+        public Form3us(int studentId)
         {
             InitializeComponent();
             _studentId = studentId;
             _studentResultService = new StudentResultService();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void Form3us_Load(object sender, EventArgs e)
         {
             LoadStudentResults();
         }
@@ -30,6 +35,5 @@ namespace ExaminationSystem
             dataGridView1.DataSource = _studentResultService.GetStudentResults(_studentId);
             textBox1.Text = $"Result Of Student Number {_studentId}";
         }
-    
-}
+    }
 }

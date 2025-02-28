@@ -109,6 +109,9 @@
     <Compile Update="Presentation\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Presentation\StudentForms\frmExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Presentation\StudentForms\frmStudentCourses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,14 +124,26 @@
     <Compile Update="Presentation\StudentForms\frmStudentProfile.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Presentation\StudentForms\frmStudentProfileUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Presentation\TeacherForms\Form1.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\Form1us.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Presentation\TeacherForms\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Presentation\TeacherForms\Form2us.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Presentation\TeacherForms\Form3.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\Form3us.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Presentation\TeacherForms\FormAddExam.cs">
       <SubType>Form</SubType>
@@ -139,16 +154,34 @@
     <Compile Update="Presentation\TeacherForms\FormAddQuestionWithAnswers.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Presentation\TeacherForms\FormAddQuestionWithAnswersUS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\FormExamPerviewUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Presentation\TeacherForms\FormExamPreview.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Presentation\TeacherForms\FormGenerateRandomExam.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Presentation\TeacherForms\FormGenerateRandomExamUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Presentation\TeacherForms\FormInsertQuestionsToExam.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Presentation\TeacherForms\FormInsertQuestionsToExamUs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Presentation\TeacherForms\FormManageQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\FormManageQuestionsUS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Presentation\TeacherForms\frmTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Presentation\TeacherForms\frmTeacherDashboard.cs">

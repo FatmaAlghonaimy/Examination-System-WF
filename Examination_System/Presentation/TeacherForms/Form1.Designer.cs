@@ -191,13 +191,12 @@
             btn_back.TabIndex = 30;
             btn_back.Text = "back";
             btn_back.UseVisualStyleBackColor = true;
-            //btn_back.Click += btn_back_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1463, 701);
+            ClientSize = new Size(1436, 691);
             Controls.Add(btn_back);
             Controls.Add(label3);
             Controls.Add(Title);
